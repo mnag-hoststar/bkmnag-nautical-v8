@@ -1,0 +1,10 @@
+<!-- Footer -->
+<footer class="template__footer">
+
+	<div class="container">
+		{{widget('content', 'footercolumn1content1', {"content":"<h4>CONTACT</h4>"})|raw}}              
+        {{widget('profile', 'footercolumn1profileemail', { 'profileType':'email', 'email':'profile'})|raw}}
+        {{widget('profile', 'footercolumn1profilephone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+	</div>
+
+</footer>

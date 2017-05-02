@@ -1,0 +1,199 @@
+// ----------------------------------------
+// Nautical: LESS > Plugins > Blog > Blog Post
+// ----------------------------------------
+//
+// #Article
+// #Image
+// #Post Content
+// #Post Footer
+// #Post Timestamp
+// #Post Attributes
+// #Sharing Links
+//
+// ----------------------------------------
+
+// ------------------------------
+// #Article
+// ------------------------------
+
+.widget[data-name="blogpost"] {
+	padding: 0;
+
+	.blogpost {
+		width: auto;
+		max-width: none;
+	}
+}
+
+.blogpost__post-article {
+	position: relative;
+	margin-bottom: 2em;
+}
+
+// ------------------------------
+// #Image
+// ------------------------------
+
+.blogpost {
+	.image-link {
+		display: block;
+		height: 40vw;
+		padding-bottom: 40%;
+		background-position: center;
+		background-size: cover;
+
+		@media @tablet {
+			height: 60vw;
+			padding-bottom: 60%;
+		}
+		
+		// Using the background image instead.
+		
+		.image {
+			display: none;
+		}
+	}
+}
+
+// ------------------------------
+// #Post Content
+// ------------------------------
+
+.blogpost {
+	&__post-content,
+	&__post-footer {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 900px;
+    }
+	&__post-content {
+		margin-bottom: 2em;
+	}
+    &__post-header {
+        padding: 2em 0 1em;
+    }
+	
+    &__post-title {
+        margin: 0;
+        padding: 0;
+        .heading--1;
+    }
+}
+
+// ------------------------------
+// #Post Footer
+// ------------------------------
+
+.blogpost__post-footer {
+	position: relative;
+}
+
+// ------------------------------
+// #Post Timestamp
+// ------------------------------
+
+.blogpost__post-footer .timestamp {
+	font-size: @font__p--font-size * 0.8;
+}
+
+// ------------------------------
+// #Post Attributes
+// ------------------------------
+
+.blogpost__post-attributes {
+	//display: table;
+	margin: 3em 0 2em;
+	padding: 2em 0 0;
+	position: relative;
+	
+	@media @mobile {
+		display: block;
+	}
+	
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		content: " ";
+		border-bottom: 0.5em solid @color-text--lightest;
+		width: 100%;
+	}
+}
+
+// ------------------------------
+// #Post Category and Tags
+// ------------------------------
+
+.post-category, .post-tags {
+    //display: table-cell;
+	
+	@media @mobile {
+    	display: block;
+	}
+}
+
+.category-title, .tags-title {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.post-category {
+    padding: 0 2em 0 0;
+	
+	@media @mobile {
+    	padding: 0;
+	}
+}
+
+.tag-list {
+	vertical-align: bottom;
+}
+
+.post-tags {
+    width: 100%;
+	
+	@media @mobile {
+		margin-top: 1em;
+    	width: auto;
+	}
+}
+
+a.blogpost__category-link,
+a.blogpost__tag-link {
+    hyphens: none;
+}
+
+// ------------------------------
+// #Sharing Links
+// ------------------------------
+
+.blogpost__sharing-links {
+	.clearfix();
+}
+
+.blogpost__network-item {
+	display: inline-block;
+    margin-right: 1em;
+	padding: 0;
+	
+	@media @tablet {
+		display: block;
+    	margin-bottom: 1em;
+	}
+}
+
+.blogpost__button {
+	&, &:hover {
+		font-family: @font__p--font-family;
+		font-size: @font__p--font-size * 0.85;
+		font-weight: @font__p--font-weight;
+	}
+	&:before {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 22px;
+	}
+	&:hover:before {
+	}
+}
