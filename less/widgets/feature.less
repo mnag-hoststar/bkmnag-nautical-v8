@@ -21,10 +21,13 @@
     background-repeat: no-repeat;
     min-height: 500px;
 
+    @media @tablet-horizontal {
+        min-height: 400px;
+    }
+
     @media @tablet {
         background-attachment: inherit;
         background-position-y: 0!important;
-        min-height: 600px;
     }
 
     @media @mobile {
@@ -44,10 +47,9 @@
     z-index: 1;
 
     @media @tablet-horizontal {
-        height: 800px;
+        height: 400px;
     }
     @media @tablet {
-        height: 700px;
     }
     @media @mobile {
         height: auto;

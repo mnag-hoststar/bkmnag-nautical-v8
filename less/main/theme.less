@@ -58,6 +58,7 @@ html, body {
 	
 	// iOS fix of VH unit
     width: -webkit-calc(100% - 0px);
+    overflow-x: hidden;
 }
 
 
@@ -98,11 +99,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     margin: 0 auto;
 
     @media @tablet {
-    	margin: 0 2em;
     }
 
 	@media @mobile {
-		display: block;
+		width: 84%;
 	}
 }
 

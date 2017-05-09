@@ -36,7 +36,8 @@
 .responsiveslideshow__figure, .responsiveslideshow__slides-list {
 	min-height: 100px;
     max-height: 700px;
-    padding-bottom: 60%;
+    padding-bottom: 50%;
+    margin-bottom: 4em;
 }
 
 // ------------------------------
@@ -84,10 +85,8 @@
 .responsiveslideshow .caption {
 	display: block;
 	position: absolute;
-	top: 0;
 	bottom: 0;
 	margin: 0;
-	padding: 3em 0;
 	background-color: fade(@color__slideshow-caption--background, 80%);
 	text-align: center;
 	.display-flex(flex);
@@ -99,7 +98,6 @@
 .responsiveslideshow__image-title,
 .responsiveslideshow__image-description {
 	margin: 0 auto;
-	max-width: 32em;
     width: @layout-width-desktop;
 
 	@media @tablet {
@@ -108,13 +106,12 @@
 }
 
 .responsiveslideshow__image-title {
-	margin-bottom: 0.5em;
 	color: @color__slideshow-title--text;
-	font-size: @font__p--font-size*1.1;
+	font-size: @font__h4--font-size;
 	
-	.make-font-a-little-smaller(@font__p--font-size*1.1);
-	.make-font-smaller(@font__p--font-size*1.1);
-	.make-font-a-lot-smaller(@font__p--font-size*1.1);
+	.make-font-a-little-smaller(@font__h4--font-size);
+	.make-font-smaller(@font__h4--font-size);
+	.make-font-a-lot-smaller(@font__h4--font-size);
 }
 
 .responsiveslideshow__image-description {
@@ -129,7 +126,7 @@
 .slide-navigation {
 	display: block;
 	position: absolute;
-	top: 0;
+	top: 50%;
     left: 0;
     right: 0;
 	margin: 0;
@@ -148,7 +145,7 @@
 
 	.button {
 		position: absolute;
-		top: 50%;
+		top: 0;
 		margin: 0;
 		padding: 0;
 		height: 2.5em;
@@ -158,7 +155,7 @@
 		.box-shadow(none);
 		.transition(background-color);
 		z-index: 2;
-		.controls-font-size();
+		.controls-font-size(16px);
 		
 		&:before,
 		&:after {
@@ -174,9 +171,12 @@
 	}
 
 	.previous-button {
-		left: 50%;
-    	margin-left: -3.75em;
-		padding-right: 0em;
+		left: 20px;
+    	-webkit-transform: translate(0,-50%);
+		-moz-transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-o-transform: translate(0,-50%);
+		transform: translate(0,-50%);
 
 		// Icon
 		&:before {
@@ -184,9 +184,12 @@
 	}
 
 	.next-button {
-    	right: 50%;
-    	margin-right: -3.75em;
-		padding-left: 0.3em;
+    	right: 20px;
+    	-webkit-transform: translate(0,-50%);
+		-moz-transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-o-transform: translate(0,-50%);
+		transform: translate(0,-50%);
 
 		// Icon
 		&:after {
@@ -195,8 +198,11 @@
 
 	.pause-toggle {
 		left: 50%;
-		margin-left: -1.25em;
-		padding-left: 0.15em;
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
 
 		// Icon
 		&:before {
@@ -216,20 +222,19 @@
 
 .responsiveslideshow__slide-pagination {
 	position: absolute;
-	bottom: 0;
+	bottom: -40px;
 	width: 100%;
 	z-index: 1;
 
 	.pagination-list {
-		margin-top: 0;
-		padding: 0
+		text-align: center;
 	}
 }
 	
 .responsiveslideshow__pagination-item {
 	position: relative;
-    margin: 0 0 40px;
-	padding: 0 8px;
+    margin: 0 0 20px;
+	padding: 0 10px;
     height: 0;
 
 	@media @tablet {
@@ -239,14 +244,14 @@
 
 	.button {
 		background-color: @color__slideshow-pagination-item--background;
-		width: 18px;
-		height: 18px;
+		width: 10px;
+		height: 10px;
 		display: block;
 		overflow: hidden;
 		text-indent: -10000px;
 		.border-radius(50%);
 		padding: 0;
-		border: 4px solid @color__slideshow-pagination-item--text;
+		border: 1px solid @color__slideshow-pagination-item--text;
 
 		@media @tablet {
 			width: 16px;
@@ -261,13 +266,9 @@
 	}
 
 	&.selected .button {
-		top: -1px;
 		background: @color__slideshow-pagination-item--text--selected;
-		border-width: 3px;
-		.transform-scale(1.5);
 
 		@media @tablet {
-			.transform-scale(1.3);
 		}
 	}
 }

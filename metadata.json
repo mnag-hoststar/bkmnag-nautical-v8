@@ -183,11 +183,16 @@
             "color__navigation--text--hover" : "#5badc4",
             "color__navigation--text--selected": "#5badc4"
         },
-        "form": {
+        "forms": {
+            "color__form--background" : "#f2f2f2",
             "color__form--border" : "#e1e5eb",
             "color__form-legend--text" : "#515151",
             "color__form-legend--background": "@color__primary"
 
+        },
+        "image": {
+            "color__image-title--text" : "#203b4c",
+            "color__image-description--text" : "#757880"
         },
         "button": {
             "color__button--background" : "@color__secondary",
@@ -201,14 +206,17 @@
             "font__button--letter-spacing" : "inherit"
         },
         "gallery": {
-            "color__gallery-caption--background" : "#26292f",
+            "color__gallery-caption--background" : "#5badc4",
             "color__gallery-title--text" : "#fff",
-            "color__gallery-description--text" : "#bebebe"
+            "color__gallery-description--text" : "#fff"
         },
         "slideshow": {
             "color__slideshow-caption--background": "#26292f",
             "color__slideshow-title--text" : "#fff",
-            "color__slideshow-description--text" : "#bebebe"
+            "color__slideshow-description--text" : "#bebebe",
+            "color__slideshow-pagination-item--background" : "transparent",
+            "color__slideshow-pagination-item--text" : "#26292f",
+            "color__slideshow-pagination-item--text--selected" : "#26292f"
         },
         "feature": {
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
