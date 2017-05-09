@@ -34,10 +34,21 @@
 }
 
 .responsiveslideshow__figure, .responsiveslideshow__slides-list {
-	min-height: 100px;
-    max-height: 700px;
-    padding-bottom: 50%;
+	//min-height: 100px;
+    //max-height: 700px;
+    //padding-bottom: 50%;
     margin-bottom: 4em;
+    height: 700px;
+
+    @media @tablet-horizontal {
+    	height: 500px;
+    }
+    @media @tablet {
+    	height: 400px;
+    }
+    @media @mobile {
+    	height: 300px;
+    }
 }
 
 // ------------------------------
@@ -55,6 +66,7 @@
 
 	&.current {
 		opacity: 1;
+		position: relative;
 	}
 	
 	// Prevents two slides from displaying at the same time
@@ -69,9 +81,9 @@
 	background-color: transparent;
 	background-size: cover;
 	background-position: center;
-	height: 100%;
-    width: 100%;
-	min-height: 0;
+	//height: 100%;
+    //width: 100%;
+	min-height: 200px;
 }
 
 .responsiveslideshow__image {
