@@ -41,11 +41,11 @@
 }
 
 .blogpostlist__post-items {
-	.inline-block-font-hack();
-	.display-flex(flex);
-    .flex-wrap(wrap);
-    .align-items(stretch, stretch);
-	.item--margin-size--border();
+//	.inline-block-font-hack();
+//	.display-flex(flex);
+//	.flex-wrap(wrap);
+//	.align-items(stretch, stretch);
+//	.item--margin-size--border();
 }
 
 // ------------------------------
@@ -54,13 +54,14 @@
 
 .blogpostlist__post-article {
 	position: relative;
-	.item--margin-size--3to1-cols();
-	background-color: @color__blogpostlist-article--background;
-	.clearfix();
+	border-bottom: 1px dotted @color__p--text;
+	padding-bottom: 80px;
+	margin-bottom: 50px;
+	//.clearfix();
 	
 	@media @mobile {
-		.display-flex(flex);
-		.flex-direction(inherit);
+		//.display-flex(flex);
+		//.flex-direction(inherit);
 	}
 }
 
@@ -73,14 +74,8 @@
         position: relative;
         overflow: hidden;
         height: 0;
-		padding-bottom: 56.25%;
-		
-		@media @mobile {
-			float: left;
-			height: 100%;
-			width: 25%;
-    		padding-bottom: 0;
-		}
+		padding-bottom: 40%;
+		.border-radius(5px);
     }
 	
     &__image-link {
@@ -106,9 +101,8 @@
 // ------------------------------
 
 .blogpostlist__post-content {
+	width: 100%;
 	margin: 0;
-	padding: 4em 1.5em 1.5em;
-	font-size: @font__p--font-size;
 
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
@@ -118,35 +112,34 @@
 .blogpostlist__post-title {
 	.heading--3;
 	padding: 0;
+	margin-top: 1em;
 }
 
 a.blogpostlist__title-link {
-	color: @color__h3--text;
+	//color: @color__h3--text;
 }
 
 // Post Excerpt
 	
+.blogpostlist__post-excerpt {
+
+}
+
 .blogpostlist__post-excerpt p {
 	line-height: 1.5em;
 	color: lighten(@color__p--text, 8%);
-	
-	@media @mobile {
-		display: none;
-	}
 }
 
 // Read more
 
 a.blogpostlist__read-more {
-	a;
+	float: left;
+	margin-top: 1em;
 }
 
 // This style only activates if the article has an image.
 
 .blogpostlist__post-image ~ .blogpostlist__post-content {
-	@media @mobile {
-		width: 75%;
-	}
 }
 
 // ------------------------------
@@ -154,34 +147,22 @@ a.blogpostlist__read-more {
 // ------------------------------
 
 .blogpostlist__post-footer {
-	position: absolute;
-	top: 0;
-    left: 0;
-    right: 0;
-	padding: 0 1.5em;
-	font-size: @font__p--font-size;
+	float: right;
 
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
 
 	.timestamp {
-		display: inline-block;
-		margin: 1.5em 0 0;
-		background: @color__blogpostlist-title--background;
-		.timestamp-styles;
+		margin: 2em 0 0;
+		font-size: @font__p--font-size*0.8;
 	}
 }
 
 // This style only activates if the article has an image.
 
 .blogpostlist__post-image ~ .blogpostlist__post-footer {
-	margin-top: 56.25%;
 	
-	@media @mobile {
-		left: 25%;
-		margin-top: 0;
-	}
 }
 
 // ------------------------------

@@ -37,10 +37,10 @@
 .blogpost {
 	.image-link {
 		display: block;
-		height: 40vw;
-		padding-bottom: 40%;
+		padding-bottom: 30%;
 		background-position: center;
 		background-size: cover;
+		.border-radius(5px);
 
 		@media @tablet {
 			height: 60vw;
@@ -62,17 +62,18 @@
 .blogpost {
 	&__post-content,
 	&__post-footer {
-		margin: 0 auto;
-		width: 80%;
-		max-width: 900px;
     }
 	&__post-content {
-		margin-bottom: 2em;
+		margin: 0;
 	}
     &__post-header {
         padding: 2em 0 1em;
     }
-	
+	&__post-body {
+		float: left;
+		width: 70%;
+		padding-right: 4em;
+	}
     &__post-title {
         margin: 0;
         padding: 0;
@@ -85,7 +86,8 @@
 // ------------------------------
 
 .blogpost__post-footer {
-	position: relative;
+	float: right;
+	width: 30%;
 }
 
 // ------------------------------
@@ -93,7 +95,9 @@
 // ------------------------------
 
 .blogpost__post-footer .timestamp {
-	font-size: @font__p--font-size * 0.8;
+	padding-bottom: 1em;
+	border-bottom: 1px solid @color-text--lighter;
+	margin-bottom: 0;
 }
 
 // ------------------------------
@@ -102,22 +106,11 @@
 
 .blogpost__post-attributes {
 	//display: table;
-	margin: 3em 0 2em;
-	padding: 2em 0 0;
+	margin: 0;
 	position: relative;
 	
 	@media @mobile {
 		display: block;
-	}
-	
-	&:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		content: " ";
-		border-bottom: 0.5em solid @color-text--lightest;
-		width: 100%;
 	}
 }
 
@@ -126,7 +119,8 @@
 // ------------------------------
 
 .post-category, .post-tags {
-    //display: table-cell;
+	padding: 1em 0;
+    border-bottom: 1px solid @color-text--lighter;
 	
 	@media @mobile {
     	display: block;
@@ -139,7 +133,6 @@
 }
 
 .post-category {
-    padding: 0 2em 0 0;
 	
 	@media @mobile {
     	padding: 0;
@@ -169,6 +162,7 @@ a.blogpost__tag-link {
 // ------------------------------
 
 .blogpost__sharing-links {
+	margin-top: 1em;
 	.clearfix();
 }
 
@@ -184,11 +178,6 @@ a.blogpost__tag-link {
 }
 
 .blogpost__button {
-	&, &:hover {
-		font-family: @font__p--font-family;
-		font-size: @font__p--font-size * 0.85;
-		font-weight: @font__p--font-weight;
-	}
 	&:before {
 		display: inline-block;
 		vertical-align: middle;

@@ -18,51 +18,49 @@
 
 .category-title,
 .tags-title {
-	label;
+	//label;
 	padding: 0;
 }
 
 .tag-list {
-	.clearfix();
 	
 	li {
-		float: left;
-		margin: 0;
 		padding: 0;
-		
-		&:last-child {
-			margin-right: 0;
-		}
+		margin: 0;
 	}
 }
 
 .tag-list,
 .tag-item,
 .dietary-list {
-	line-height: 1em;
 }
 
 a.category-link,
 a.tag-link,
 .dietary-item {
 	display: inline-block;
-	background: @color__blogpost-article--background;
-	margin: 0.4em 0.8em 0.4em 0;
-	padding: 0.6em;
-	line-height: 1em;
-	letter-spacing: @font__h4--letter-spacing;
-	text-transform: uppercase;
-	font-size: @font__h4--font-size*0.8;
-	font-family: @font__h4--font-family;
+	background: @color__button--background;
+	margin: 0;
+	padding: 0 10px;
+	line-height: 1.5em;
+	font-size: @font__p--font-size;
+	font-family: @font__p--font-family;
 	color: @color__button--text;
+	.border-radius(10px);
 	
 	.make-font-a-little-smaller(@font__h4--font-size, 0.7);
 	.make-font-smaller(@font__h4--font-size, 0.7);
 	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
-	
+}
+
+a.category-link,
+a.tag-link {
+	cursor: pointer;
+
 	&:hover {
-		background: @color__blogpost-article--background;
+		background: @color__button--background--hover;
 	}
+
 }
 
 // ------------------------------
@@ -76,7 +74,6 @@ a.tag-link,
 .blogpostlist {
 	.pagination-list {
 		.display-flex(flex);
-		max-width: @layout-width-desktop;
 		margin: 2em auto;
 	}
 
