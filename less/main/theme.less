@@ -89,6 +89,16 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .template__content {
 	padding: @header-height 0;
+
+	@media @tablet-horizontal {
+		padding: @header-height*0.7 0;
+	}
+	@media @tablet {
+		padding: @header-height*0.6 0;
+	}
+	@media @mobile {
+		padding: @header-height*0.5 0;
+	}
 }
 
 // Container
