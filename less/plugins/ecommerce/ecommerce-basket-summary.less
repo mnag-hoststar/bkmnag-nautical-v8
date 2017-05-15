@@ -20,6 +20,8 @@
 // ------------------------------
 
 .summary-title {
+    padding-bottom: .5em;
+    border-bottom: 5px solid fade(@color__p--text, 20%);
 }
 
 // ------------------------------
@@ -28,18 +30,22 @@
 
 .summary-table {
     border-collapse: separate;
-    border-spacing: 0 10px;
     width: 100%;
     margin: 0;
+    border-bottom: 5px solid fade(@color__p--text, 20%);
+    margin-bottom: 2em;
 	
     // Table and Cells Reset
 
-    &, td, th, .cell {
+    td, th, .cell {
+        border-collapse: separate;
+        border-spacing: 0 10px;
         border: none;
         background: transparent;
         padding: 0;
         padding-top: 10px;
         padding-bottom: 10px;
+        border-bottom: 1px solid fade(@color__p--text, 20%);
 		
     }
 	
@@ -57,7 +63,7 @@
 		}
 			
         .cell {
-            padding-bottom: 1em;
+            padding: 1.6em 0;
             font-family: @font__h1--font-family;
             text-transform: uppercase;
             color: @color__p--text;
@@ -93,7 +99,7 @@
         padding-left: 10px;
 		
 		@media @basketsummary-medium, @mobile {
-			float: left;
+			width: auto;
 		}
 	}
 
@@ -137,23 +143,17 @@
         padding: 0 16px 0 0;
         width: 10%;
         min-width: 100px;
+        border-right: 1px solid fade(@color__p--text, 20%);
 		
 		@media @basketsummary-medium, @mobile {
-            .clearfix();
-            padding: 6px 10px;
-            text-align: right;
-            position: relative;
             width: auto;
-
+            border-right: none;
+            padding: 1em;
+            border: none;
+            text-align: center;
             // Pseudo Label - LESS Framework
 
             &:before {
-                height: 30px;
-                line-height: 30px !important;
-                display: block;
-                position: absolute;
-                right: 90px;
-                top: 6px;
             }
         }
     }
@@ -166,8 +166,7 @@
 		background-color: transparent;
 
         @media @basketsummary-medium, @mobile {
-            margin: 0 -5px 0 auto;
-            max-width: 100%;
+            max-width: none;
         }
 
 		// Button Quantity
@@ -193,24 +192,23 @@
     // Cell Total, Cell Price
 
 	.cell--price, .cell--total {
+        text-align: right;
 		@media @basketsummary-medium, @mobile {
             float: left;
             width: 50%;
-            border-top: 1px solid @color__container--background !important;
-            padding: 6px 10px;
+            padding: 1em;
             background-color: darken(@color__container--background, 8%) !important;
         }
 	}
 	
     .cell--total {
         text-align: right;
-        padding: 0 16px;
+
     }
     .cell--price {
-        padding: 0 0 0 16px;
-        text-align: right;
 		
         @media @basketsummary-medium, @mobile {
+            text-align: left;
             clear: left;
         }
     }
@@ -220,6 +218,8 @@
     .cell--order-total {
         text-align: right;
         background-color: @color__container--background;
+        border-bottom: 0;
+        padding: 1.6em 0;
     }
 
     // Cell Image Item Link
@@ -248,6 +248,7 @@
 	// Order Total
 	
 	.order-total {
+        padding: 0;
 		color: @color__p--text;
 
          @media @basketsummary-medium, @mobile {

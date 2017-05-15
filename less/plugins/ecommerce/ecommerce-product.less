@@ -33,7 +33,7 @@
     display: -webkit-flex;
     display: flex;
 
-    @media @bp-product-rows {
+    @media @tablet {
         display: block;
     }
 }
@@ -62,15 +62,10 @@
 // ------------------------------
 
 .product-image {
-    background-color: #fff;
-    padding: 10px;
-	margin: 2em 2em 2em 10em;
 	
     @media @tablet-horizontal {
-        margin: 40px;
     }
     @media @tablet {
-        margin: 20px;
     }
 
     body.product-one-image & {
@@ -117,71 +112,36 @@
 // ------------------------------
 
 .product-gallery {
-    overflow: hidden;
-	position: absolute;
-	top: 70px;
-	left: 70px;
-	margin: 0;
-	.inline-block-font-hack();
+    border-top: 1px solid fade(@color__p--text, 20%);
+    padding-top: 1em;
 
     @media @tablet-horizontal {
-        margin: 0 40px;
-        position: relative;
-        max-width: 390px;
         overflow: hidden;
-        height: 60px;
-        top: 0;
-        left: 0;
     }
 
     @media @tablet, @mobile {
-        margin: 20px;
-        position: relative;
-        max-width: 270px;
-        height: 40px;
     }
 
     // Gallery Item
 
     .gallery-item {
         position: relative;
-        background-color: #fff;
-        display: block;
-        border: 2px solid #fff;
 		float: none;
-		margin-bottom: 16px;
-		line-height: 74px;
 
         @media @tablet-horizontal, @tablet {
-            float: left;
         }
-
         @media @tablet-horizontal {
-            width: 60px;
-            height: 60px;
-            line-height: 56px;
-            margin-right: 6px;
         }
         @media @tablet {
-            width: 40px;
-            height: 40px;
-            line-height: 36px;
-            margin-right: 6px;
         }
     }
 
     // Image Button
 
     .image-button {
-        display: inline-block;
-        line-height: 76px;
         @media @tablet-horizontal {
-            line-height: 56px;
-            height: 60px;
         }
         @media @tablet {
-            line-height: 36px;
-            height: 40px;
         }
 
         // Image
@@ -209,14 +169,13 @@
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
     background: @color__container--background;
-    margin: 0 auto;
-    max-width: @layout-width-desktop;
+    margin: 0 0 0 auto;
+    max-width: 45%;
 
     @media @tablet-horizontal {
-        padding: 40px;
     }
     @media @tablet {
-        padding: 0 20px 20px;
+        max-width: none;
     }
 }
 
