@@ -20,6 +20,7 @@
 	-ms-flex: 1;   
     flex: 1;
     z-index: 3;
+    margin: 1em 0;
 	
 	@media @tablet {
 		-webkit-flex: 5;
@@ -237,7 +238,7 @@ html.nav-open {
 			overflow: auto;
 			height: auto;
 			height: 100vh;
-			background-color: fade(@color__body--background, 90%);
+			background-color: fade(@color__header--background, 90%);
 			.transition(opacity, 0.25s);
 		}
 	}
@@ -362,7 +363,7 @@ html.nav-open {
 		overflow: visible;
 		text-align: center;
 		.transition(opacity, 0s);
-		.box-shadow(0px 5px 20px 0px fade(@color__button--background, 20%));
+		.box-shadow(0px 5px 20px 0px fade(#000000, 15%));
 
 		@media @tablet {
 			position: static;
