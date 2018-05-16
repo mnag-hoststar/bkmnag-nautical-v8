@@ -195,8 +195,8 @@
             "color__image-description--text" : "#757880"
         },
         "button": {
-            "color__button--background" : "@color__secondary",
             "color__button--text" : "@color__primary",
+            "color__button--background" : "@color__secondary",
             "color__button--background--hover": "#4597ad",
             "color__button--text--hover" : "@color__primary",
             "font__button--font-family" : "@font-swatch7-font-family",
