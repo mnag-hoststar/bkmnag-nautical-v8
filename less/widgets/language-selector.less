@@ -1,5 +1,5 @@
 // ----------------------------------------
-// Sitrus: LESS > Widgets > Language Selection
+// Nautical: LESS > Widgets > Language Selection
 // ----------------------------------------
 //
 // #General Styles
@@ -135,6 +135,12 @@
 			width: 100%;
 		}
 	}
+	
+	.language-selector.language-selector--dropdown.language-selector--flag & {
+		@media @mobile {
+			width: auto;
+		}
+	}
 }
 
 // ------------------------------
@@ -267,7 +273,7 @@
 	.language-selector & {
 		margin-right: 0;
 		padding: @language-padding 0;
-		min-height: font__navigation--line-height;
+		min-height: @font__navigation--line-height;
 		box-sizing: content-box;
 		line-height: @color__button--line-height;
 	}
