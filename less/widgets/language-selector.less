@@ -28,7 +28,7 @@
 	}
 
 	&.language-selector--light {
-		background-color: @color__container--background;
+		background-color: @color__header--background;
 		
 		@media @mobile {
   			box-shadow: none;
@@ -80,17 +80,17 @@
 .language-selector__inner {
     .language-selector & {
 	    box-sizing: content-box;
-    	padding: @font__button--line-height @language-padding*2 @language-padding*2 @language-padding;
 		max-width: 1140px;
 		width: 90%;
 		margin: 0 auto;
     }
     
     .language-selector.language-selector--horizontal & {
-    	padding: @language-padding 0;
+    	padding: @language-padding 0 0;
     }
 
 	.language-selector.language-selector--dropdown & {
+    	padding: @font__button--line-height @language-padding*2 @language-padding*2 @language-padding;
 	    box-sizing: border-box;
 		width: 90%;
 		margin: 0 auto;
@@ -104,10 +104,6 @@
     	    content: "";
             display: block;
     	}
-
-		@media @mobile {
-			width: 100%;
-		}
 	}
 }
 
@@ -124,16 +120,7 @@
 		margin: @language-padding 0 0;
 		box-sizing: border-box;
 		min-width: auto;
-		max-width: 100%;
-        
-        @media @tablet {
-		    margin: 0;
-	    	max-width: 100%;
-        }
-		
-		@media @mobile {
-			width: 100%;
-		}
+	    max-width: 100%;
 	}
 	
 	.language-selector.language-selector--dropdown.language-selector--flag & {
@@ -164,7 +151,11 @@
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
+	}
+	
+	.language-selector.language-selector--horizontal & {
         margin-left: @language-padding;
+        margin-bottom: @language-padding;
 	}
 	
 	// Link Color
@@ -249,6 +240,10 @@
 		padding-right: @language-padding*6;
 	}
 	
+	.language-selector.language-selector--dropdown.language-selector--flag & {
+	    line-height: 0;
+	}
+	
 	// Link Color
 	
 	.language-selector.language-selector--horizontal &,
@@ -275,10 +270,12 @@
 		padding: @language-padding 0;
 		min-height: @font__navigation--line-height;
 		box-sizing: content-box;
-		line-height: @color__button--line-height;
+		line-height: @font__button--line-height;
 	}
+	.language-selector.language-selector--flag &,
 	.language-selector.language-selector--flag-text & {
 		margin: 0;
+		padding: 0;
 	}
 	.language-selector.language-selector--dropdown.language-selector--flag-text & {
 		float: left;
