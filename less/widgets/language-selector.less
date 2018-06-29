@@ -80,20 +80,16 @@
 .language-selector__inner {
     .language-selector & {
 	    box-sizing: content-box;
-		max-width: 1140px;
-		width: 90%;
-		margin: 0 auto;
+		padding: 0 @language-padding;
     }
     
     .language-selector.language-selector--horizontal & {
-    	padding: @language-padding 0 0;
+    	padding: @language-padding @language-padding 0;
     }
 
 	.language-selector.language-selector--dropdown & {
     	padding: @font__button--line-height @language-padding*2 @language-padding*2 @language-padding;
 	    box-sizing: border-box;
-		width: 90%;
-		margin: 0 auto;
 		
     	&:before {
     	    content: "";
@@ -117,10 +113,10 @@
     }
 	
 	.language-selector.language-selector--dropdown & {
-		margin: @language-padding 0 0;
+		margin: @language-padding @language-padding 0;
 		box-sizing: border-box;
 		min-width: auto;
-	    max-width: 100%;
+		max-width: calc(~"100% -" @language-padding*2);
 	}
 	
 	.language-selector.language-selector--dropdown.language-selector--flag & {
@@ -143,7 +139,7 @@
 		background-color: transparent;
 		width: auto;
 		max-width: 100%;
-		padding: 0 @language-padding*2;
+		padding: 0 @language-padding/2;
 		-webkit-transition: 0.2s;
         -moz-transition: 0.2s;
         -ms-transition: 0.2s;
