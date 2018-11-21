@@ -88,12 +88,12 @@
 // #Animation
 // ------------------------------
 
-.transition(@property: all, @duration: 0.15s, @ease: ease-in-out, @delay: 0s) {
-	-webkit-transition: @property @duration @ease @delay;
-	-moz-transition: @property @duration @ease @delay;
-    -ms-transition: @property @duration @ease @delay;
-	-o-transition: @property @duration @ease @delay;
-	transition: @property @duration @ease @delay;
+.transition(@transition...) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+    -ms-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
 }
 
 .transition-property(@property...) {
@@ -120,12 +120,12 @@
 	transition-delay: @delay;
 }
 
-.transform(@rotate, @scale, @skew, @translate) {
-	-webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-	-moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-	-ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-	-o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-	transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+.transform(@transform...) {
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	-ms-transform: @transform;
+	-o-transform: @transform;
+	transform: @transform;
 }
 
 .transform-rotate(@deg) {

@@ -16,21 +16,23 @@
 // ------------------------------
 
 .template__company {
+    z-index: 3;
+    margin: 1em 0;
 	-webkit-flex: 1;
 	-ms-flex: 1;   
     flex: 1;
-    z-index: 3;
-    margin: 1em 0;
 	
 	@media @tablet {
-		-webkit-flex: 5;
-		-ms-flex: 5;  
-	    flex: 5;
+		-webkit-flex: 10;
+		-ms-flex: 10;  
+	    flex: 10;
+		margin-right: 60px;
 	}
 	
 	.widget {
 		display: table-cell;
 		vertical-align: middle;
+		word-break: break-all;
 	}
 }
 
@@ -38,7 +40,8 @@
 	padding-right: 10px;
     font-size: 1em;
 	
-	&__logo-image {
+	.logo-link img {
+		min-width: 30px;
 	}
 }
 
@@ -77,26 +80,18 @@ html.nav-open {
 	-webkit-flex: 1;
 	-ms-flex: 1; 
     flex: 1;
+	
     @media @tablet {
-		-webkit-flex: 1;
-		-ms-flex: 1;   
-		flex: 1;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -30px;
     }
 }
 
 .widget[data-widget-type="extendednavigation"] {
-	//padding: 0;
-	//position: static;
-	&.open {
-		
-	}
 	@media @tablet {
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		z-index: 2;
+		position: relative;
 	}
 }
 
@@ -114,20 +109,20 @@ html.nav-open {
 		
 		// Displays as Icon's Middle Bar
 		z-index: 100;
-		cursor: pointer;
-		background: @color__navigation--text;
-		background-clip: content-box;
-		width: 28px;
-		height: 3px;
-		padding: 0;
-		display: block;
 		position: absolute;
-		top: 30px;
-		right: 1em;
-		margin: 28px 20px;
+		top: 0;
+		right: 0;
+		display: block;
+		cursor: pointer;
+		background-color: transparent;
+		background-clip: content-box;
+		padding: 0;
+		margin: 15px 20px;
+		width: 28px;
+		height: 25px;
 		font-size: 26px;
 		text-indent: 10000px;
-		.transition(background, 0s, ease-in, 0.05s);
+		.transition(background 0.2s ease-in 0.05s);
 
 		.make-font-a-little-smaller(@font__companyname--font-size);
 		.make-font-smaller(@font__companyname--font-size);
@@ -145,8 +140,8 @@ html.nav-open {
 			background-color: @color__navigation--text;
 			margin-right: 0;
 			margin-left: 0;
-			.transition-duration(0.05s, 0.05s);
-			.transition-delay(0.05s, 0s);
+			.transition(all 0.05s ease-in-out);
+			.transition-delay(0.05s);
 
 			@media @mobile {
 				height: 2px;
@@ -156,19 +151,32 @@ html.nav-open {
 		// Top Bar
 		
 		&:before {
-			top: 0.4em;
-		  	.transition-property(top, transform);
+			top: 0;
+		  	.transition-property(top);
 		}
 
 		// Bottom Bar
 		
 		&:after {
-			bottom: 0.4em;
-			.transition-property(bottom, transform);
+			bottom: 0;
+			.transition-property(bottom);
+		}
+
+		// Middle Bar
+		
+		span {
+			display: block;
+			font-size: 0;
+			height: 3px;
+			width: 100%;
+			background-color: @color__navigation--text;
+			.transition(background-color 0.05s ease-in-out);
 		}
 
 		&:hover {
-			&, &:before, &:after {
+			background-color: transparent;
+			
+			&:before, &:after, span {
 				background-color: @color__navigation--text;
 			}
 		}
@@ -179,21 +187,19 @@ html.nav-open {
 	.open & {
 		@media @tablet {
 			
-			// Middle bar
-			
-			background: transparent;
-			
 			// Top and bottom bar
 			
 			&:before,
 			&:after {
-			  .transition-delay(0s, 0.05s);
+				.transition-delay(0.05s);
+		  		.transition-property(transform);
 			}
 			
 			// Top Bar
 
 			&:before {
-				top: 0;
+				top: 50%;
+				margin-top: -1.5px;
 				background: @color__navigation--text;
 				.transform-rotate(45deg);
 
@@ -202,9 +208,16 @@ html.nav-open {
 			// Bottom Bar
 
 			&:after {
-				bottom: 0;
+				bottom: 50%;
+				margin-bottom: -1.5px;
 				background: @color__navigation--text;
 				.transform-rotate(-45deg);
+			}
+			
+			// Middle bar
+			
+			span {
+				background: transparent;
 			}
 		}
 	}
@@ -217,7 +230,7 @@ html.nav-open {
 // Dark overlay on tablet and mobile.
 
 .navigation-body {
-	.transition(opacity, 0s);
+	.transition(opacity 0s ease-in-out);
 	
 	// This is only shown in Tablet and Mobile
 	
@@ -231,6 +244,9 @@ html.nav-open {
 		// When Navigation is open
 
 		.open & {
+			position: fixed;
+			left: 0;
+			bottom: 0;
 			display: block;
 			opacity: 1;
 			width: auto;
@@ -239,7 +255,7 @@ html.nav-open {
 			height: auto;
 			height: 100vh;
 			background-color: fade(@color__header--background, 90%);
-			.transition(opacity, 0.25s);
+			.transition(opacity 0.25s ease-in-out);
 		}
 	}
 }
@@ -286,7 +302,8 @@ html.nav-open {
 		line-height: @font__navigation--line-height;
 		letter-spacing: @font__navigation--letter-spacing;
 		color: @color__navigation--text;
-		.transition (all, 0.5s, ease);
+		.transition (all 0.5s ease);
+		
 		@media @tablet {
 			padding: 0.5em 0;
 			font-size: @font__navigation--font-size * 1.2;
@@ -299,7 +316,7 @@ html.nav-open {
 		
 		&:hover {
 			color: @color__navigation--text--hover;
-			.transition (all, 0.5s, ease);
+			.transition (all 0.5s ease);
 			
 			@media @tablet {
 				color: @color__navigation--text--hover;
@@ -364,7 +381,7 @@ html.nav-open {
 		background-color: @color__navigation-list--background;
 		overflow: visible;
 		text-align: center;
-		.transition(opacity, 0s);
+		.transition(opacity 0s ease-in-out);
 		.box-shadow(0px 5px 20px 0px fade(#000000, 15%));
 
 		@media @tablet {
@@ -381,7 +398,7 @@ html.nav-open {
 		display: block;
 		opacity: 1;
 		height: auto;
-		.transition(opacity);
+		.transition(opacity 0s ease-in-out);
 
 		@media @tablet {
 			position: static;

@@ -12,6 +12,7 @@
 // #Dropdowns
 // #Radio Buttons and Checkboxes
 // #Error Messages
+// #Terms Checkbox
 // 
 // #Sign Up Form
 // #Contact Form
@@ -63,12 +64,9 @@
 // #Form
 // ------------------------------
 
-.form .form-body {
-}
-
 .form .form-group {
 	margin-bottom: 1em;
-
+	
 	&:last-of-type {
 		margin-bottom: 0;
 	}
@@ -115,7 +113,7 @@ textarea {
     background-color: @color__form--background;
     border: 1px solid transparent;
     color: @color__p--text;
-	.transition();
+	.transition(all 0.15s ease-in-out);
     .border-radius(15px);
     .appearance(none);
 	
@@ -217,11 +215,9 @@ input:focus {
 			&:before {
 				content: " ";
 				position: absolute;
-				//top: 0.7em;
 				left: -40px;
 				width: 22px;
 				height: 22px;
-				//margin-top: -0.8em;
 				background-color: @color__form--background;
 				border: 1px solid transparent;
 			}
@@ -229,7 +225,7 @@ input:focus {
 			&:after {
 				opacity: 0;
 				position: absolute;
-				.transition(opacity, 0.1s);
+				.transition(opacity 0.1s ease-in-out);
 			}
 		}
 	}
@@ -279,7 +275,6 @@ input:focus {
 				left: -39px;
 				width: 20px;
 				height: 20px;
-				//margin-top: -0.8em;
 				.transform-scale(0.5);
 			}
 		}
@@ -396,11 +391,96 @@ input:focus {
 }
 
 // ------------------------------
+// #Terms Checkbox
+// ------------------------------
+
+.widget {
+	.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+	.contactform .form-group.contactform__form-group--terms,
+	.signupform .form-group.signupform__form-group--terms {
+		position: relative;
+		width: 100%;
+		margin: 2em 1px;
+		padding: 0;
+		
+		label {
+			span a.form__link {
+				.paragraph;
+				line-height: 1.5em;
+			}
+			
+			display: block;
+			position: relative;
+			margin-left: 40px;
+			.transform-scale(1);
+			
+			&:before {
+				content: " ";
+				position: absolute;
+				left: -40px;
+				width: 22px;
+				height: 22px;
+				background-color: @color__form--background;
+				border: 1px solid transparent;
+				min-width: auto;
+				max-height: none;
+				.border-radius(0);
+			}
+			
+			&:after {
+				opacity: 0;
+				position: absolute;
+				left: -36px;
+				top: 1px;
+				content: "\f00c";
+				border: none;
+				height: 20px;
+				font-family: 'FontAwesome', sans-serif;
+				color: @color__button--background;
+				.transition(opacity 0.1s ease-in-out);
+				.transform(rotate(0));
+				font-size: @font__p--font-size;
+			}
+		}
+		
+		input[type="checkbox"] {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0 !important;
+			padding: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+
+			&:hover + label:before {
+				border: 1px solid transparent;
+				background-color: fade(@color__form--background, 75%);
+			}
+
+			&:checked + label:before {
+				border: 1px solid @color__button--background;
+			}
+
+			&:checked + label:after {
+				opacity: 1;
+			}
+
+			&:focus + label:before,
+			&:focus:checked + label:before {
+				border: 1px solid @color-highlight--light;
+			}
+		}
+	}
+}
+
+// ------------------------------
 // #Sign Up Form
 // ------------------------------
 
 .signupform {
-	
 	.form-body {
 		display: table;
 		width: 100%;
@@ -410,19 +490,29 @@ input:focus {
 		display: table-cell;
 		vertical-align: middle;
 		height: 3em;
+			
+		@media @mobile {
+			display: block;
+			height: auto;
+		}
 		
 		&:first-child {
 			width: 100%;
 			padding-right: 0.5em;
+			
+			@media @mobile {
+				padding-right: 0;
+			}
 		}
 		
 		.button {
 			white-space: nowrap;
 		}
-	}
+		
+		label {
+			display: none;
+		}
 
-	label {
-		display: none;
 	}
 }
 

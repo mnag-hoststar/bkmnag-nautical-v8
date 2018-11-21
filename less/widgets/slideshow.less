@@ -143,7 +143,7 @@
     right: 0;
 	margin: 0;
 	opacity: 0;
-	.transition(opacity);
+	.transition(opacity 0.15s ease-in-out);
 	
 	// Controls are only show when the
 	// slideshow is hovered over.
@@ -165,7 +165,7 @@
 	    border: none;
 		background-color: fade(@color__slideshow-pagination-item--background, 80%);
 		.box-shadow(none);
-		.transition(background-color);
+		.transition(background-color 0.15s ease-in-out);
 		z-index: 2;
 		.controls-font-size(16px);
 		
