@@ -85,6 +85,7 @@ html.nav-open {
 		position: absolute;
 		top: 50%;
 		right: 0;
+		bottom: 0;
 		margin-top: -30px;
     }
 }
@@ -93,6 +94,7 @@ html.nav-open {
 	@media @tablet {
 		position: relative;
 		z-index: 2;
+		height: 100%;
 	}
 }
 
@@ -111,16 +113,16 @@ html.nav-open {
 		// Displays as Icon's Middle Bar
 		z-index: 100;
 		position: absolute;
-		top: 0;
+		top: 50%;
 		right: 0;
 		display: block;
 		cursor: pointer;
 		background-color: transparent;
 		background-clip: content-box;
 		padding: 0;
-		margin: 15px 20px;
+		margin: -11px 20px 0;
 		width: 28px;
-		height: 25px;
+		height: 22px;
 		font-size: 26px;
 		text-indent: 10000px;
 		.transition(background 0.2s ease-in 0.05s);
