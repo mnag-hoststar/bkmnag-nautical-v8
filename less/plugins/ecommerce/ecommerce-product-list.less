@@ -70,10 +70,6 @@
 // #Product Search
 // ------------------------------
 
-.product-filters {
-	
-}
-
 .product-filters .fieldset--search {
 
 	@media (max-width: 1024px) {
@@ -86,6 +82,10 @@
 
 	@media @tablet {
 		padding: 14px 20px;
+	}
+
+	@media @mobile {
+		padding: 14px 0;
 	}
 	
 	.responsivecolumns & {
@@ -134,33 +134,33 @@
 
     // First Form Group
 
-    .form-group:first-of-type {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-        padding-right: 0.5em;
+    .form-group {
+		&:first-of-type {
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			padding-right: 0.5em;
+
+			@media @mobile {
+				padding-right: 0;
+			}
+		}
+		
+		&:last-of-type {
+			@media @mobile {
+				width: 100%;
+				padding: 0.5em 0 0;
+			}
+		}
+		
+		.ecomproductslist__button,
+		.ecomproductslist__button--clear {
+			width: 100%;
+			text-align: center;
+		}
     }
 
     // Last Form Group
-
-    .form-group:last-of-type {
-        margin: 0;
-
-    }
-
-    // Clear Search Group Selector :) Ugly, I know
-
-    .form-group + .form-group + .form-group {
-        width: 100%;
-        margin-right: 10px;
-        margin-top: 10px;
-
-        .button {
-            width: 100%;
-            text-align: center;
-            display: block;
-        }
-    }
 
     .input {
         height: @font__button--line-height;
@@ -181,7 +181,6 @@
                 font-family: 'FontAwesome', sans-serif;
                 position: absolute;
                 text-align: center;
-                line-height: 44px;
                 color: @color__button--text;
                 font-size: 18px;
                 top: 0;
@@ -192,10 +191,6 @@
                 margin-left: 0;
             }
         }
-        @media @mobile {
-            &:after {
-            }
-        }
     }
 }
 
@@ -204,14 +199,18 @@
 // ------------------------------
 
 .product-filters .fieldset--filters {
-
     @media (max-width: 1024px) {
         width: 100%;
         padding: 10px 40px;
     }
+	
     @media @tablet {
         padding: 10px 20px;
     }
+
+	@media @mobile {
+		padding: 10px 0;
+	}
 	
 	// Form Body
 	
@@ -234,8 +233,10 @@
 		-webkit-align-items: flex-end;
 		-ms-flex-align: end;
 		align-items: flex-end;
+		margin: 0 -2%;
 
 		@media @tablet {
+			margin: 0;
 			// Hack for Mobile IE, needs fixed width
 			width: 100px;
 			min-width: 100%;
@@ -245,23 +246,34 @@
 	// Form Group
 	
 	.form-group {
+		margin: 0 2%;
 		min-width: 15%;
 		width: auto;
 		-webkit-flex: 1 1 auto;
 		-ms-flex: 1 1 auto;
 		flex: 1 1 auto;
-		margin-right: 5%;
-		margin-bottom: 0;
 
-		&:last-of-type {
-			margin-right: 0;
+		@media @tablet {
+			&:first-child,
+			&:last-child {
+				margin-left: 0;
+			}
+			
+			&:nth-child(2),
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			&:last-child {
+				width: 100%;
+			}
 		}
-
 
 		@media @mobile {
 			width: 100%;
 			margin-bottom: 8px;
 			margin-right: 0;
+			margin-left: 0;
 		}
 
 
