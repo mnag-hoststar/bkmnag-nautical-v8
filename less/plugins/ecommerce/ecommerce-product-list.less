@@ -188,6 +188,18 @@
                 right: 0;
                 text-indent: 0;
                 margin-left: 0;
+
+                .style--light & {
+                    color: @contrast--accent;
+                }
+
+                .style--accent & {
+                    color: @contrast--dark;
+                }
+
+                .style--dark & {
+                    color: @contrast--accent;
+                }
             }
         }
     }
@@ -288,6 +300,18 @@
 			display: block;
 			margin-bottom: 5px;
 			text-transform: uppercase;
+
+            .style--light & {
+                color: @contrast--light;
+            }
+
+            .style--accent & {
+                color: @contrast--accent;
+            }
+
+            .style--dark & {
+                color: @contrast--dark;
+            }
 		}
 
 		// Select Wrap
@@ -322,6 +346,21 @@
     }
     @media @tablet {
         padding: 12px 20px;
+    }
+
+    .style--light & {
+        border-color: darken(@color--light, 10%);
+        color: fade(@contrast--light, 80%);
+    }
+
+    .style--accent & {
+        border-color: darken(@color--accent, 10%);
+        color: fade(@contrast--accent, 80%);
+    }
+
+    .style--dark & {
+        border-color: darken(@color--dark, 10%);
+        color: fade(@contrast--dark, 80%);
     }
 }
 
@@ -499,6 +538,18 @@
 
     .title-link {
         color: @color__ecomproductslist-product-title--text;
+
+        .style--light & {
+            color: @contrast--light;
+        }
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
+        }
     }
 }
 
@@ -522,6 +573,18 @@
 
     @media @tablet {
         padding:  20px;
+    }
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
     }
 	
 	// Column styles

@@ -45,7 +45,12 @@
 
 .imagewidget__image {
 	.border-radius(5px);
-}
+
+    [data-name="row"] & {
+        .border-radius(0);
+    }
+}   
+
 
 // Image Title
 
@@ -54,8 +59,36 @@
 	color: @color__image-title--text;
 }
 
+[data-name="image"] .image-title {
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
 // Image Description
 
 .image-description {
 	color: @color__image-description--text;
+}
+
+[data-name="image"] .image-description {
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }

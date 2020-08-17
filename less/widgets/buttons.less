@@ -22,7 +22,8 @@ a.button,
 .tweet .button,
 .clicktocall .phone-number-link,
 a.ecomproduct__button,
-a.blogpostlist__read-more {
+a.blogpostlist__read-more,
+a.contentgroup__link {
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -48,6 +49,21 @@ a.blogpostlist__read-more {
         background-color: @color__button--background--hover;
     	color: @color__button--text--hover;
     	.transition (all 0.5s ease);
+
+        .style--light & {
+            background-color: lighten(@color--accent, 10%);
+            color: @contrast--accent;
+        }
+
+        .style--accent & {
+            background-color: lighten(@color--dark, 10%);
+            color: @contrast--dark;
+        }
+
+        .style--dark & {
+            background-color: lighten(@color--accent, 10%);
+            color: @contrast--accent;
+        }
     }
 	
 	// Focus style for easier keyboard navigation
@@ -60,6 +76,21 @@ a.blogpostlist__read-more {
 	
 	&:active {
 	}
+
+    .style--light & {
+        background-color: @color--accent;
+        color: @contrast--accent;
+    }
+
+    .style--accent & {
+        background-color: @color--dark;
+        color: @contrast--dark;
+    }
+
+    .style--dark & {
+        background-color: @color--accent;
+        color: @contrast--accent;
+    }
 }
 
 .button,
@@ -84,17 +115,6 @@ a.button,
 	}
 }
 
-.link-button,
-.tweet .button,
-.clicktocall .phone-number-link {
-    display: table-cell;
-    vertical-align: middle;
-	
-	 &:hover {
-	}
-	&:active {
-	}
-}
 
 // -----------------------------
 // #Tweet Button
@@ -111,16 +131,6 @@ a.button,
 // -----------------------------
 // #Dropbox
 // -----------------------------
-
-.dropbox {
-	display: table;
-}
-
-.dropbox__button,
-.dropbox__label {
-	display: table-cell;
-	vertical-align: middle;
-}
 
 .dropbox__label {
 	width: 100%;
@@ -173,6 +183,21 @@ a.button,
 		background: @color__button--background--hover !important;
 		color: @color__button--text--hover !important;
 		.transition (all 0.5s ease);
+
+        .style--light & {
+            background-color: lighten(@color--accent, 10%)!important;
+            color: @contrast--accent!important;
+        }
+
+        .style--accent & {
+            background-color: lighten(@color--accent, 10%)!important;
+            color: @contrast--accent!important;
+        }
+
+        .style--dark & {
+            background-color: lighten(@color--accent, 10%)!important;
+            color: @contrast--accent!important;
+        }
 	}
 
 	// Icon
@@ -183,6 +208,21 @@ a.button,
 		font-size: 1.3em;
 		display: block;
 	}
+
+    .style--light & {
+        background-color: @color--accent!important;
+        color: @contrast--accent!important;
+    }
+
+    .style--accent & {
+        background-color: @color--dark!important;
+        color: @contrast--dark!important;
+    }
+
+    .style--dark & {
+        background-color: @color--accent!important;
+        color: @contrast--accent!important;
+    }
 }
 
 // The name of the button is not displayed.
