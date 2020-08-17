@@ -66,6 +66,18 @@
 	.twitter-body-background--spacing();
 	.twitter-widget-background--spacing();
 	background-color: @color__twitter--background;
+
+	.style--light & {
+        background-color: @color--light;
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+    }
 }
 
 // ------------------------------
@@ -95,6 +107,18 @@
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
+
+	.style--light & {
+        background-color: @color--light;
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+    }
 }
 
 // ------------------------------
@@ -129,6 +153,18 @@ a.twitter__account-link {
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 // ------------------------------
@@ -139,6 +175,20 @@ a.twitter__account-link {
 	padding: 1em 1.5em 4.5em;
     line-height: 1.5em;
 	.tweet-content--spacing();
+
+    a {
+        .style--light & {
+            color: @contrast--light;
+        }
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
+        }
+    }
 }
 
 // ------------------------------
@@ -182,4 +232,21 @@ a.twitter__account-link {
     letter-spacing: 1px;
     text-transform: uppercase;
 	font-size: 0.8em;
+}
+
+.tweet-metadata .via,
+.tweet-metadata a,
+.twitter__timestamp {
+
+	.style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }

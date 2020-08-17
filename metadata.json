@@ -5,6 +5,7 @@
 	"screenshot":"nautical-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
+    "versionTenCompatible": 1,
     "images":[
         "images/feature-image.jpg",
         "images/gallery/1.jpg",
