@@ -21,6 +21,20 @@
         max-width: 100%;
         width: 100%;
     }
+
+    .page--default [data-widget-type="pagetitle"] {
+        margin-top: 4em;
+    }
+
+    .page--default [data-widget-type="pagetitle"]:not(.bk-tpl-hidden) + #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 0!important
+    }
+
+    .column + .column {
+        @media @mobile {
+            margin-top: 12px;
+        }
+    }
 }
 
 
@@ -46,10 +60,10 @@
     // Replaces main padding by moving this to the first widget in the zone
     &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
     #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 4em;           // Main padding top
+        margin-top: 4em!important;           // Main padding top
 
         @media @mobile {
-            margin-top: 2em;
+            margin-top: 2em!important;
         }
     }
 
