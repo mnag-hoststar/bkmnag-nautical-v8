@@ -163,19 +163,33 @@
 // Arrow Bounce
 
 .arrow-bounce {
+    animation-name: bounce;
     -webkit-animation-name: bounce;
     -moz-animation-name: bounce;
+    animation-duration: .7s;
     -webkit-animation-duration: .7s;
     -moz-animation-duration: .7s;
+    animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
+    animation-direction: alternate;
     -webkit-animation-direction: alternate;
     -moz-animation-direction: alternate;
+    animation-timing-function: eaze-in-out;
     -webkit-animation-timing-function: eaze-in-out;
     -moz-animation-timing-function: eaze-in-out;
 }
 
 // Bounce Keyframes
+
+@keyframes bounce {
+    from {
+        top: 0;
+    }
+    to {
+        top: 8px;
+    }
+}
 
 @-webkit-keyframes bounce {
     from {
