@@ -373,9 +373,19 @@
 
 	@media @mobile {
 		width: 100%;
-		margin-right: 0;
+		margin: 0 0 40px;
 	}
 	
+    .responsivecolumns & {
+		width: 100%/2;
+		margin: 0 0 40px;
+
+		@media @mobile {
+			width: 100%;
+			margin: 0 0 40px;
+		}
+    }
+
 	.columns-three-left &,
 	.columns-three-right &,
 	.columns-three-middle &,
@@ -383,10 +393,14 @@
 	.columns-four-second &,
 	.columns-four-third &,
 	.columns-four-fourth & {
-		width: auto;
-		margin: 0;
-	}
-	
+		width: 100%;
+		margin: 0 0 40px;
+
+		@media @mobile {
+			margin: 0 0 40px;
+		}
+	} 
+
     // Clickable item, class added via JS
 
     &.clickable {
@@ -498,8 +512,6 @@
     @media @tablet {
         padding: 20px;
     }
-	
-	// Column styles
 	
     .responsivecolumns & {
         background-color: transparent;
