@@ -70,6 +70,12 @@
 		float: left;
 		width: 70%;
 		padding-right: 4em;
+	
+		@media @mobile {
+			float: none;
+			width: auto;
+			padding-right: 0;
+		}
 	}
     &__post-title {
         margin: 0;
@@ -86,6 +92,12 @@
 .blogpost__post-footer {
 	float: right;
 	width: 30%;
+	
+	@media @mobile {
+		float: none;
+		width: auto;
+		margin: 4em 0;
+	}
 }
 
 // ------------------------------
@@ -181,7 +193,5 @@ a.blogpost__tag-link {
 		display: inline-block;
 		vertical-align: middle;
 		font-size: 22px;
-	}
-	&:hover:before {
 	}
 }
