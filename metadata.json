@@ -186,8 +186,7 @@
         "forms": {
             "color__form--background" : "#f2f2f2",
             "color__form--border" : "#e1e5eb",
-            "color__form-legend--text" : "#515151",
-            "color__form-legend--background": "@color__primary"
+            "color__form-legend--text" : "#515151"
 
         },
         "image": {
