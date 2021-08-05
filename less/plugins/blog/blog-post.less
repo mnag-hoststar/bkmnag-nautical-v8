@@ -60,9 +60,6 @@
 // ------------------------------
 
 .blogpost {
-	&__post-content,
-	&__post-footer {
-    }
 	&__post-content {
 		margin: 0;
 	}
@@ -78,6 +75,7 @@
         margin: 0;
         padding: 0;
         .heading--1;
+		color: @color__blogpost-title--text;
     }
 }
 
@@ -96,8 +94,9 @@
 
 .blogpost__post-footer .timestamp {
 	padding-bottom: 1em;
-	border-bottom: 1px solid @color-text--lighter;
+	border-bottom: 1px solid @color__blogpost-title--background;
 	margin-bottom: 0;
+	color: @color__blogpost-title--background;
 }
 
 // ------------------------------
