@@ -58,6 +58,18 @@
 	margin-bottom: 1em;
 	color: @color__form-legend--text;
 	background-color: transparent;
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 // ------------------------------
@@ -120,6 +132,15 @@ textarea {
 	&:hover {
 		background-color: fade(@color__form--background, 75%);
     	border: 1px solid transparent;
+
+        .style--light & {
+            background-color: darken(@color--light, 10%);
+        }
+
+        .style--accent &,
+        .style--dark {
+            background-color: @color--light;
+        }
 	}
 	
 	// Focus style for easier keyboard navigation
@@ -127,7 +148,30 @@ textarea {
 	&:focus {
     	border: 1px solid @color-highlight--light;
 		.box-shadow(none);
+
+        .style--light & {
+            border-color: @color--accent;
+        }
+
+        .style--accent & {
+            border-color: @contrast-accent;
+        }
+
+        .style--dark & {
+            border-color: @color--accent;
+        }
 	}
+
+    .style--light & {
+        background-color: darken(@color--light, 8%);
+        color: @contrast--light;
+    }
+
+    .style--accent &,
+    .style--dark {
+        background-color: @color--light;
+        color: @contrast--light;
+    }
 }
 
 // Multiple Lines Inputs
@@ -145,18 +189,42 @@ textarea {
 
 ::-webkit-input-placeholder {
    color: @color-text--light;
+
+   .style--light &,
+   .style--accent &,
+   .style--dark & {
+        color: @contrast--light;
+    }
 }
 
 :-moz-placeholder { /* Firefox 18- */
    color: @color-text--light;
+
+   .style--light &,
+   .style--accent &,
+   .style--dark & {
+        color: @contrast--light;
+    }
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: @color-text--light;
+
+   .style--light &,
+   .style--accent &,
+   .style--dark & {
+        color: @contrast--light;
+    }
 }
 
 :-ms-input-placeholder {
    color: @color-text--light;
+
+   .style--light &,
+   .style--accent &,
+   .style--dark & {
+        color: @contrast--light;
+    }
 }
 
 input:focus {
@@ -211,6 +279,15 @@ input:focus {
 				height: 22px;
 				background-color: @color__form--background;
 				border: 1px solid transparent;
+
+                .style--light & {
+                    background-color: darken(@color--light, 8%);
+                }
+
+                .style--accent &,
+                .style--dark & {
+                    background-color: @color--light;
+                }
 			}
 
 			&:after {
@@ -237,10 +314,31 @@ input:focus {
 		&:hover + label:before {
 	    	border: 1px solid transparent;
 	    	background-color: fade(@color__form--background, 75%);
+
+            .style--light & {
+                background-color: darken(@color--light, 10%);
+            }
+
+            .style--accent &,
+            .style--dark & {
+                background-color: @color--light;
+            }
 		}
 
 		&:checked + label:before {
 			border: 1px solid @color__button--background;
+
+            .style--light & {
+                border-color: darken(@color--light, 10%);
+            }
+
+            .style--accent & {
+                border-color: darken(@color--accent, 10%);
+            }
+
+            .style--dark & {
+                border-color: darken(@color--dark, 10%);
+            }
 		}
 
 		&:checked + label:after {
@@ -250,6 +348,12 @@ input:focus {
 		&:focus + label:before,
 		&:focus:checked + label:before {
 			border: 1px solid @color-highlight--light;
+
+            .style--light &,
+            .style--accent &,
+            .style--dark & {
+                border-color: @color--accent;
+            }
 		}
 	}
 
@@ -267,6 +371,12 @@ input:focus {
 				width: 20px;
 				height: 20px;
 				.transform-scale(0.5);
+
+                .style--light &,
+                .style--accent &,
+                .style--dark & {
+                    background-color: @color--accent;
+                }
 			}
 		}
 	}
@@ -279,6 +389,12 @@ input:focus {
 				color: @color__button--background;
 				left: -36px;
 				top: 1px;
+
+                .style--light &,
+                .style--accent &,
+                .style--dark & {
+                    color: @color--accent;
+                }
 			}
 		}
 	}
@@ -343,17 +459,63 @@ input:focus {
     &:hover {
 		border: 1px solid transparent;
 		background-color: fade(@color__form--background, 75%);
+
+        .style--light & {
+            background-color: darken(@color--light, 10%);
+            color: @contrast--light;
+        }
+
+        .style--accent &,
+        .style--dark {
+            background-color: @color--light;
+            color: @contrast--light;
+        }
     }
 
     &:focus {
 		border: 1px solid @color-highlight--light;
 		background-color: transparent;
+
+        .style--light & {
+            border-color: @color--accent;
+        }
+
+        .style--accent & {
+            border-color: @contrast-accent;
+        }
+
+        .style--dark & {
+            border-color: @color--accent;
+        }
 	}
 	
 	&:hover:focus {
 		border: 1px solid @color-highlight;
 		background-color: transparent;
+
+        .style--light & {
+            border-color: @color--accent;
+        }
+
+        .style--accent & {
+            border-color: @contrast-accent;
+        }
+
+        .style--dark & {
+            border-color: @color--accent;
+        }
 	}
+
+    .style--light & {
+        background-color: darken(@color--light, 8%);
+        color: @contrast--light;
+    }
+
+    .style--accent &,
+    .style--dark {
+        background-color: @color--light;
+        color: @contrast--light;
+    }
 }
 
 .select::-ms-expand {
@@ -398,6 +560,18 @@ input:focus {
 			span a.form__link {
 				.paragraph;
 				line-height: 1.5em;
+
+                .style--light & {
+                    color: @contrast--light;
+                }
+
+                .style--accent & {
+                    color: @contrast--accent;
+                }
+
+                .style--dark & {
+                    color: @contrast--dark;
+                }
 			}
 			
 			display: block;
@@ -416,6 +590,17 @@ input:focus {
 				min-width: auto;
 				max-height: none;
 				.border-radius(0);
+
+                .style--light & {
+                    background-color: darken(@color--light, 8%);
+                    color: @contrast--light;
+                }
+
+                .style--accent &,
+                .style--dark {
+                    background-color: @color--light;
+                    color: @contrast--light;
+                }
 			}
 			
 			&:after {
@@ -431,6 +616,12 @@ input:focus {
 				.transition(opacity 0.1s ease-in-out);
 				.transform(rotate(0));
 				font-size: @font__p--font-size;
+
+                .style--light &,
+                .style--accent &,
+                .style--dark {
+                    color: @color--accent;
+                }
 			}
 		}
 		
@@ -449,10 +640,28 @@ input:focus {
 			&:hover + label:before {
 				border: 1px solid transparent;
 				background-color: fade(@color__form--background, 75%);
+
+                .style--light &,
+                .style--accent &,
+                .style--dark & {
+                    background-color: fade(@color--light, 75%);
+                }
 			}
 
 			&:checked + label:before {
 				border: 1px solid @color__button--background;
+
+                .style--light & {
+                    border-color: darken(@color--light, 10%);
+                }
+
+                .style--accent & {
+                    border-color: darken(@color--accent, 10%);
+                }
+
+                .style--dark & {
+                    border-color: darken(@color--dark, 10%);
+                }
 			}
 
 			&:checked + label:after {
@@ -462,6 +671,12 @@ input:focus {
 			&:focus + label:before,
 			&:focus:checked + label:before {
 				border: 1px solid @color-highlight--light;
+
+                .style--light &,
+                .style--accent &,
+                .style--dark & {
+                    border-color: @color--accent;
+                }
 			}
 		}
 	}

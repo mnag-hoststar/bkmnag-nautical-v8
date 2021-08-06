@@ -46,6 +46,21 @@ a.tag-link,
 	.make-font-a-little-smaller(@font__h4--font-size, 0.7);
 	.make-font-smaller(@font__h4--font-size, 0.7);
 	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
+
+	.style--light & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
+	.style--accent & {
+	    background-color: @color--dark;
+	    color: @contrast--dark;
+	}
+
+	.style--dark & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
 }
 
 a.category-link,
@@ -54,6 +69,21 @@ a.tag-link {
 
 	&:hover {
 		background: @color__button--background--hover;
+
+		.style--light & {
+            background-color: lighten(@color--accent, 10%);
+            color: @contrast--accent;
+        }
+
+        .style--accent & {
+            background-color: lighten(@color--dark, 10%);
+            color: @contrast--dark;
+        }
+
+        .style--dark & {
+            background-color: lighten(@color--accent, 10%);
+            color: @contrast--accent;
+        }
 	}
 
 }
