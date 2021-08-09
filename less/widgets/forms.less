@@ -404,28 +404,6 @@ input:focus {
     @media @mobile {
         max-width: 100%;
     }
-	
-    // Icon
-
-    &:before {
-        content: '\f107';
-        font-family: 'FontAwesome', sans-serif;
-        display: inline-block;
-        height: 1em;
-        line-height: 1em;
-        text-align: center;
-		font-size: 1.5em;
-        color: @color__p--text;
-        position: absolute;
-        right: 0.5em;
-        top: 50%;
-        margin-top: -0.5em;
-        z-index: 1;
-
-		@media @mobile {
-			font-size: 2em;
-		}
-    }
 }
 
 // Select
@@ -433,7 +411,7 @@ input:focus {
 .select {
     position: relative;
     display: block;
-	padding: 0 2em 0 1em;
+	padding: 0 2.2em 0 1em;
     width: 100%;
     border: 1px solid transparent;
 	background-color: @color__form--background;
@@ -441,6 +419,10 @@ input:focus {
     color: @color__p--text;
     .border-radius(15px);
     .appearance(none);
+	background-image: image('/images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 1.2em;
 
     @media @mobile {
 		padding: 0 2.7em 0 1em;
