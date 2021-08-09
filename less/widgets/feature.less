@@ -1,8 +1,6 @@
 // ----------------------------------------
 // Nautical: LESS > Widgets > Feature
 // ----------------------------------------
-//
-// ----------------------------------------
 
 // Hero
 
@@ -128,82 +126,4 @@
     position: absolute;
     top: auto !important;
     bottom: 0 !important;
-}
-
-// Feature Arrow
-
-.feature-arrow {
-    position: absolute;
-    top: 850px;
-    opacity: .6;
-	width: 1400px;
-	
-    @media @tablet-horizontal {
-        top: 700px;
-    }
-    @media @tablet {
-        top: 600px;
-    }
-    @media @mobile {
-        display: none;
-    }
-}
-
-.feature-arrow-link {
-    position: relative;
-    display: block;
-    margin: 0 auto !important;
-    width: 60px;
-    height: 60px;
-
-    background-image: image('/images/down-arrow.png');
-    background-image: image('/images/down-arrow.svg');
-}
-
-// Arrow Bounce
-
-.arrow-bounce {
-    animation-name: bounce;
-    -webkit-animation-name: bounce;
-    -moz-animation-name: bounce;
-    animation-duration: .7s;
-    -webkit-animation-duration: .7s;
-    -moz-animation-duration: .7s;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    animation-direction: alternate;
-    -webkit-animation-direction: alternate;
-    -moz-animation-direction: alternate;
-    animation-timing-function: eaze-in-out;
-    -webkit-animation-timing-function: eaze-in-out;
-    -moz-animation-timing-function: eaze-in-out;
-}
-
-// Bounce Keyframes
-
-@keyframes bounce {
-    from {
-        top: 0;
-    }
-    to {
-        top: 8px;
-    }
-}
-
-@-webkit-keyframes bounce {
-    from {
-        top: 0;
-    }
-    to {
-        top: 8px;
-    }
-}
-@-moz-keyframes bounce {
-    from {
-        top: 0;
-    }
-    to {
-        top: 8px;
-    }
 }
