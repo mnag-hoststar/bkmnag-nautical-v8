@@ -1,20 +1,6 @@
-// ----------------------------------------
 // Nautical: LESS > Widgets > Language Selection
-// ----------------------------------------
-//
-// #General Styles
-// #Inner
-// #List
-// #Item
-// #Link
-// #Icon
-// #Name
-//
-// ----------------------------------------
 
-// ------------------------------
-// #General Styles
-// ------------------------------
+// General Styles
 
 @language-padding: 0.5em;
 
@@ -74,9 +60,7 @@
     }
 }
 
-// ------------------------------
-// #Inner
-// ------------------------------
+// Inner
 
 .language-selector__inner {
     .language-selector & {
@@ -97,6 +81,7 @@
             display: block;
     	    height: @color__button--line-height;
     	}
+
     	&:after {
     	    content: "";
             display: block;
@@ -104,9 +89,7 @@
 	}
 }
 
-// ------------------------------
-// #List
-// ------------------------------
+// List
 
 .language-selector__list {
     .language-selector & {
@@ -127,9 +110,7 @@
 	}
 }
 
-// ------------------------------
-// #Item
-// ------------------------------
+// Item
 
 .language-selector__item {
 	.language-selector.language-selector--light &,
@@ -211,9 +192,7 @@
 	}
 }
 
-// ------------------------------
-// #Link
-// ------------------------------
+// Link
 
 @media only screen and (max-width: 616px) {
 	.language-selector--dropdown .language-selector__link {
@@ -262,9 +241,7 @@
 	}
 }
 
-// ------------------------------
-// #Icon
-// ------------------------------
+// Icon
 
 .language-selector__icon {
 	.language-selector & {
@@ -286,9 +263,7 @@
 	}
 }
 
-// ------------------------------
-// #Name
-// ------------------------------
+// Name
 
 .language-selector__name,
 .language-selector__localised-name {
@@ -303,6 +278,7 @@
 		display: inline-block;
 		padding: 0 0 0 @language-padding;
 	}
+	
 	.language-selector.language-selector--text & {
 		display: block;
 	}

@@ -1,19 +1,6 @@
-// ----------------------------------------
 // Nautical: LESS > Widgets > Navigation
-// ----------------------------------------
-//
-// #Logo & Company Name
-// #Navigation
-// #Navigation Toggle Button
-// #Navigation Body
-// #Navigation List
-// #Navigation Items
-//
-// ----------------------------------------
 
-// ------------------------------
-// #Logo & Company Name
-// ------------------------------
+// Logo & Company Name
 
 .template__company {
     z-index: 3;
@@ -67,9 +54,7 @@
 	}
 }
 
-// ------------------------------
-// #Navigation
-// ------------------------------
+// Navigation
 
 
 html.nav-open {
@@ -90,19 +75,12 @@ html.nav-open {
 	}
 }
 
-// ------------------------------
-// #Navigation Toggle Button
-// ------------------------------
-
 // Navigation Toggle Button
-// It only appears on tablet and mobile sizes.
 
 .navigation-toggle {
 	display: none;
 	
 	@media @tablet {
-		
-		// Displays as Icon's Middle Bar
 		z-index: 100;
 		position: absolute;
 		top: 50%;
@@ -218,16 +196,10 @@ html.nav-open {
 	}
 }
 
-// ------------------------------
-// #Navigation Body
-// ------------------------------
-
-// Dark overlay on tablet and mobile.
+// Navigation Body
 
 .navigation-body {
 	.transition(opacity 0s ease-in-out);
-	
-	// This is only shown in Tablet and Mobile
 	
 	@media @tablet {
 		outline: 0;
@@ -235,8 +207,6 @@ html.nav-open {
 		width: 0;
 		opacity: 0;
 		display: none;
-		
-		// When Navigation is open
 
 		.open & {
 			position: fixed;
@@ -255,10 +225,7 @@ html.nav-open {
 	}
 }
 
-
-// ------------------------------
-// #Navigation List
-// ------------------------------
+// Navigation List
 
 .navigation-list {
 	padding: 1.5em 0;
@@ -272,9 +239,7 @@ html.nav-open {
 	}
 }
 
-// ------------------------------
-// #Navigation Items
-// ------------------------------
+// Navigation Items
 
 // Navigation Normal Item
 
@@ -306,10 +271,6 @@ html.nav-open {
 			font-size: @font__navigation--font-size * 1.2;
 			line-height: @font__navigation--line-height * 1.2;
 		}
-	
-		//.make-font-a-little-smaller(@font__navigation--font-size);
-		//.make-font-smaller(@font__navigation--font-size);
-		//.make-font-a-lot-smaller(@font__navigation--font-size);
 		
 		&:hover {
 			color: @color__navigation--text--hover;

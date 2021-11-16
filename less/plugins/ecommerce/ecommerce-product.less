@@ -1,22 +1,6 @@
-// ----------------------------------------
 // Nautical: LESS > Plugins > Ecommerce > Product
-// ----------------------------------------
-//
-// #Product
-// #Images
-// #Product Image
-// #Product Gallery
-// #Product Content
-// #Product Actions
-// #Product Attributes
-// 
-// ----------------------------------------
 
-// ------------------------------
-// #Product
-// ------------------------------
-
-// Product Article
+// Product
 
 .product-article {
     display: -webkit-box;
@@ -30,9 +14,7 @@
     }
 }
 
-// ------------------------------
-// #Images
-// ------------------------------
+// Images
 
 .product-images {
     -webkit-flex: 0 1 50%;
@@ -41,9 +23,7 @@
     padding: 1px 0;
 }
 
-// ------------------------------
-// #Product Image
-// ------------------------------
+// Product Image
 
 .product-image {
     &.no-image {
@@ -64,10 +44,12 @@
 			padding: 20px;
 			height: 350px;
 		}
+
 		@media @tablet {
 			padding: 10px;
 			height: 300px;
 		}
+
 		@media @mobile {
 			padding: 10px;
 			height: 200px;
@@ -81,9 +63,7 @@
 	}
 }
 
-// ------------------------------
-// #Product Gallery
-// ------------------------------
+// Product Gallery
 
 .product-gallery {
     border-top: 1px solid fade(@color__p--text, 20%);
@@ -93,30 +73,16 @@
         overflow: hidden;
     }
 
-    @media @tablet, @mobile {
-    }
-
     // Gallery Item
 
     .gallery-item {
         position: relative;
 		float: none;
-
-        @media @tablet-horizontal, @tablet {
-        }
-        @media @tablet-horizontal {
-        }
-        @media @tablet {
-        }
     }
 
     // Image Button
 
     .image-button {
-        @media @tablet-horizontal {
-        }
-        @media @tablet {
-        }
 
         // Image
 
@@ -124,9 +90,11 @@
             line-height: 76px;
             display: inline-block;
             vertical-align: middle;
+
             @media @tablet-horizontal {
                 line-height: 56px;
             }
+
             @media @tablet {
                 line-height: 36px;
             }
@@ -134,9 +102,7 @@
     }
 }
 
-// ------------------------------
-// #Product Content
-// ------------------------------
+// Product Content
 
 .product-content {
     -webkit-flex: 0 1 50%;
@@ -146,8 +112,6 @@
     margin: 0 0 0 auto;
     max-width: 45%;
 
-    @media @tablet-horizontal {
-    }
     @media @tablet {
         max-width: none;
     }
@@ -172,9 +136,7 @@
     margin: 16px 0 24px;
 }
 
-// ------------------------------
-// #Product Actions
-// ------------------------------
+// Product Actions
 
 .product-actions {
     margin-bottom: 2em;
@@ -224,9 +186,7 @@
     }
 }
 
-// ------------------------------
-// #Product Attributes
-// ------------------------------
+// Product Attributes
 
 .product-attributes {
     .clearfix();

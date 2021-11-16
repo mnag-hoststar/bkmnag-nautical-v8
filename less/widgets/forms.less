@@ -1,39 +1,12 @@
-// ----------------------------------------
 // Nautical: LESS > Widgets > Forms
-// ----------------------------------------
-//
-// #Conditional Mixins
-// #Form Background
-// #Legend
-// #Form
-// #Label
-// #Text Inputs
-// #Placeholders
-// #Dropdowns
-// #Radio Buttons and Checkboxes
-// #Error Messages
-// #Terms Checkbox
-// 
-// #Sign Up Form
-// #Contact Form
-// #Advanced Contact Form
-//
-// ----------------------------------------
 
-// ------------------------------
-// #Conditional Mixins
-// ------------------------------
-
-// Conditional if the form background 
-// is not the same as the page background.
+// Conditional Mixins
 
 .form-widget-background--spacing() when not (@color__form--background = @color__body--background) {
 	padding: 2em 0;
 }
 
-// ------------------------------
-// #Global Form Styles
-// ------------------------------
+// Global Form Styles
 
 .form {
 	margin: 0 auto;
@@ -43,9 +16,7 @@
 	}
 }
 
-// ------------------------------
-// #Legend
-// ------------------------------
+// Legend
 
 .form .legend {
 	margin-bottom: 1em;
@@ -65,9 +36,7 @@
     }
 }
 
-// ------------------------------
-// #Form
-// ------------------------------
+// Form
 
 .form .form-group {
 	margin-bottom: 1em;
@@ -77,9 +46,7 @@
 	}
 }
 
-// ------------------------------
-// #Label
-// ------------------------------
+// Label
 
 .form label {
 	margin: 0 0 0.3em;
@@ -102,11 +69,7 @@ select {
 	font-size: @font__p--font-size * 0.9;
 }
 
-// ------------------------------
-// #Text Inputs
-// ------------------------------
-
-// All Input Fields
+// Text Inputs
 
 input[type="search"],
 input[type="email"],
@@ -135,8 +98,6 @@ textarea {
             background-color: @color--light;
         }
 	}
-	
-	// Focus style for easier keyboard navigation
 	
 	&:focus {
     	border: 1px solid @color-highlight--light;
@@ -173,9 +134,7 @@ textarea {
     display: block;
 }
 
-// ------------------------------
-// #Placeholders
-// ------------------------------
+// Placeholders
 
 ::-webkit-input-placeholder {
    color: @color-text--light;
@@ -187,7 +146,7 @@ textarea {
     }
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
    color: @color-text--light;
 
    .style--light &,
@@ -197,7 +156,7 @@ textarea {
     }
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {
    color: @color-text--light;
 
    .style--light &,
@@ -235,9 +194,7 @@ input:focus {
     }
 }
 
-// ------------------------------
-// #Radio Buttons and Checkboxes
-// ------------------------------
+// Radio Buttons and Checkboxes
 
 .option-list {
 	margin-top: 1em;
@@ -390,10 +347,6 @@ input:focus {
 	}
 }
 
-// ------------------------------
-// #Dropdowns
-// ------------------------------
-
 // Select Wrap
 
 .select-wrap {
@@ -494,9 +447,7 @@ input:focus {
     display: none;
 }
 
-// ------------------------------
-// #Error Messages
-// ------------------------------
+// Error Messages
 
 .form {
     input.error {
@@ -515,9 +466,7 @@ input:focus {
     }
 }
 
-// ------------------------------
-// #Terms Checkbox
-// ------------------------------
+// Terms Checkbox
 
 .widget {
 	.advancedcontactform .form-group.advancedcontactform__form-group--terms,
@@ -654,9 +603,7 @@ input:focus {
 	}
 }
 
-// ------------------------------
-// #Sign Up Form
-// ------------------------------
+// Sign Up Form
 
 .signupform {
 	.form-body {

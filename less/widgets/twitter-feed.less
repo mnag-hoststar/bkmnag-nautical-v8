@@ -1,29 +1,10 @@
-// ----------------------------------------
 // Nautical: LESS > Widgets > Twitter Feed
-// ----------------------------------------
-//
-// #Conditional Mixins
-// #Tweet Item
-// #Avatar
-// #Account Link
-// #Content
-// #Tweet Metadata
-//
-// ----------------------------------------
 
-// ------------------------------
-// #Conditional Mixins
-// ------------------------------
-
-// Conditional if the container background 
-// is not the same as the page background.
+// Conditional Mixins
 
 .twitter-body-background--spacing() when not (@color__twitter--background = @color__body--background) {
 	padding: 2em 0;
 }
-
-// Conditionals if the container background 
-// is the same as the item background.
 
 .twitter-widget-background--spacing() when (@color__twitter--background = @color__twitter-item--background) {
 	padding: 1em 0;
@@ -58,9 +39,7 @@
 	}
 }
 
-// ------------------------------
-// #Twitter Widget Container
-// ------------------------------
+// Twitter Widget Container
 
 .widget[data-name="twitter"] {
 	.twitter-body-background--spacing();
@@ -80,9 +59,7 @@
     }
 }
 
-// ------------------------------
-// #Tweet List
-// ------------------------------
+// Tweet List
 
 .twitter__tweet-list {
 	.inline-block-font-hack();
@@ -104,9 +81,7 @@
 	}
 }
 
-// ------------------------------
-// #Tweet Item
-// ------------------------------
+// Tweet Item
 
 .tweet-item {
 	position: relative;
@@ -146,9 +121,7 @@
     }
 }
 
-// ------------------------------
-// #Avatar
-// ------------------------------
+// Avatar
 
 .twitter__avatar {
 	position: static;
@@ -163,9 +136,7 @@
 	height: @font__p--line-height*2;
 }
 
-// ------------------------------
-// #Account Link
-// ------------------------------
+// Account Link
 
 a.twitter__account-link {
     display: block;
@@ -192,9 +163,7 @@ a.twitter__account-link {
     }
 }
 
-// ------------------------------
-// #Content
-// ------------------------------
+// Content
 
 .tweet-content {
 	padding: 1em 1.5em 4.5em;
@@ -216,9 +185,7 @@ a.twitter__account-link {
     }
 }
 
-// ------------------------------
-// #Tweet Metadata
-// ------------------------------
+// Tweet Metadata
 
 .tweet-metadata {
 	position: absolute;

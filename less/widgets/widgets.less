@@ -1,18 +1,6 @@
-// ----------------------------------------
 // Nautical: LESS > Widgets > Widgets
-// ----------------------------------------
-//
-// #Global Widget Styles
-// #Columns
-// #Page Title Widget
-// #Line Widget
-//
-// ----------------------------------------
 
-
-// -----------------------------
-// #Standard Widgets
-// -----------------------------
+// Standard Widgets
 
 .main-content .widget {
     margin: 0 @value__widget--spacing--desktop @value__widget--spacing--desktop;
@@ -29,18 +17,20 @@
 }
 
 // Responsive Column Widgets
+
 #page-zones__main > .widget[data-name="responsivecolumns"] {
 
     // Widget
+
     .widget {
         width: 100%;
+
         @media @mobile {
             margin: 0 0 30px;
         }
     }
 
     .widget[data-name="content"] {
-
         @media @mobile {
             margin-bottom: 20px;
         }
@@ -48,6 +38,7 @@
 }
 
 // Column
+
 #page-zones__main > .widget[data-name="responsivecolumns"] .column {
     @media @mobile {
         margin-bottom: 30px;
@@ -58,9 +49,7 @@
     }
 }
 
-// -----------------------------
-// #Full Width Widgets
-// -----------------------------
+// Full Width Widgets
 
 
 .widget[data-name="responsiveslideshow"],
@@ -85,11 +74,7 @@
     }
 }
 
-
-
-// -----------------------------
-// #Line Widget
-// -----------------------------
+// Line Widget
 
 .line {
     line-height: 0;
@@ -111,11 +96,3 @@ hr.line__rule {
         background-color: lighten(@color--dark, 8%);
     }
 }
-
-// -----------------------------
-// #Space Widget
-// -----------------------------
-
-// -----------------------------
-// #Page Title Widget
-// -----------------------------

@@ -1,21 +1,6 @@
-// ----------------------------------------
 // Nautical: LESS > Main > Theme
-// ----------------------------------------
-// This contains all styles that are not
-// widgets.
-//
-// #Header
-// #Site Styles
-// #Header
-// #Page Styles
-// #Content
-// #Footer
-//
-// ----------------------------------------
 
-// ------------------------------
-// #Header
-// ------------------------------
+// Header
 
 .template__header {
 	position: relative;
@@ -31,13 +16,9 @@
     align-items: center;
     -webkit-align-self: center;
     align-self: center;
-    //height: 120px;
 }
 
-
-// ------------------------------
-// #Site Styles
-// ------------------------------
+// Site Styles
 
 * {
 	.box-sizing(border-box);
@@ -51,12 +32,9 @@
 
 html, body {
     background-color: @color__body--background;
-	
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
-	
-	// iOS fix of VH unit
     width: -webkit-calc(100% - 0px);
 }
 
@@ -64,31 +42,25 @@ body:not(.edit) {
     overflow-x: hidden;
 }
 
-
 // Site Container
+
 .site-container {
 
     @media @bp-global-above-fullwidth {
     }
 }
 
-
 // HTML5 Semantic Elements
+
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
 	display: block;
 }
 
-// ------------------------------
-// #Widgets
-// ------------------------------
+// Widgets
 
 .widget__item.item--option {
     padding: 0;
 }
-
-// ------------------------------
-// #Content
-// ------------------------------
 
 // Main
 
@@ -130,9 +102,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 	}
 }
 
-// ------------------------------
-// #Footer
-// ------------------------------
+// Footer
 
 .template__footer {
     width: 100%;
@@ -142,7 +112,6 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     padding: 2em 0;
 	.footer-border-removal();
 	
-	// Widget
 	h1, h2, h3, h4, h5, p, .profile a {
 		color: @color__footer--border;
 	}
