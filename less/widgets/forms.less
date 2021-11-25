@@ -40,10 +40,6 @@
 
 .form .form-group {
 	margin-bottom: 1em;
-	
-	&:last-of-type {
-		margin-bottom: 0;
-	}
 }
 
 // Label
@@ -203,6 +199,7 @@ input:focus {
 	.label--checkbox {
 		.paragraph;
 		line-height: 1.5em;
+		min-height: 1.5em;
 	}
 
 	.option-item--radio,
@@ -610,20 +607,19 @@ input:focus {
 
 .signupform {
 	.form-body {
-		display: table;
-		width: 100%;
-	}
-
-	.form-group {
-		display: table-cell;
-		vertical-align: middle;
-		height: 3em;
-			
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		
 		@media @mobile {
 			display: block;
-			height: auto;
 		}
-		
+			
+		.responsivecolumns & {
+			display: block;
+		}
+	}
+
 	.form-group {
 		&:first-child {
 			flex-grow: 1;

@@ -93,8 +93,22 @@ a.button,
 .link-button,
 .tweet .button,
 .clicktocall .phone-number-link {
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tweet .button,
+.clicktocall .phone-number-link {
+    float: left;
+}
+
+.widget__buttonwidget,
+.widget__clicktocall,
+.widget__dropbox,
+.widget__tweet,
+[data-name="filedownload"] {
+    overflow: auto;
 }
 
 // Click to Call
