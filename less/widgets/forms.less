@@ -624,17 +624,30 @@ input:focus {
 			height: auto;
 		}
 		
+	.form-group {
 		&:first-child {
-			width: 100%;
+			flex-grow: 1;
+			width: 60%;
 			padding-right: 0.5em;
-			
+
 			@media @mobile {
+				display: block;
+				height: auto;
+				width: 100%;
+				padding-right: 0;
+			}
+				
+			.responsivecolumns & {
+				display: block;
+				height: auto;
+				width: 100%;
 				padding-right: 0;
 			}
 		}
 		
 		.button {
-			white-space: nowrap;
+			word-break: break-word;
+			width: 100%;
 		}
 		
 		label {
