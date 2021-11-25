@@ -1,4 +1,4 @@
-// Nautical: LESS > Widgets > Forms
+// Forms
 
 // Conditional Mixins
 
@@ -453,12 +453,15 @@ input:focus {
     input.error {
         border: none !important;
     }
+
     textarea.error {
         border: 1px solid @message-color--error !important;
     }
+
     .form-group {
         .error {
             border-bottom: 2px solid @message-color--error !important;
+
             &:focus {
 				.box-shadow(none);
             }
