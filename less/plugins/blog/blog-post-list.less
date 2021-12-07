@@ -64,93 +64,92 @@
     &__image {
         display: none;
     }
-}
 
-// Content
-
-.blogpostlist__post-content {
-	width: 100%;
-	margin: 0;
-
-	.make-font-a-little-smaller(@font__p--font-size);
-	.make-font-smaller(@font__p--font-size);
-	.make-font-a-lot-smaller(@font__p--font-size);
-}
-
-.blogpostlist__post-title {
-	.heading--3;
-	padding: 0;
-	margin-top: 1em;
-}
-
-a.blogpostlist__title-link {
-
-    .style--light & {
-        color: @contrast--light;
+    // Content
+    
+    &__post-content {
+        width: 100%;
+        margin: 0;
+    
+        .make-font-a-little-smaller(@font__p--font-size);
+        .make-font-smaller(@font__p--font-size);
+        .make-font-a-lot-smaller(@font__p--font-size);
+    }
+    
+    &__post-title {
+        .heading--3;
+        padding: 0;
+        margin-top: 1em;
     }
 
-    .style--accent & {
-        color: @contrast--accent;
+    &__title-link {
+        .style--light & {
+            color: @contrast--light;
+        }
+    
+        .style--accent & {
+            color: @contrast--accent;
+        }
+    
+        .style--dark & {
+            color: @contrast--dark;
+        }
     }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
-}
-
-// Post Excerpt
-
-.blogpostlist__post-excerpt p {
-	line-height: 1.5em;
-	color: lighten(@color__p--text, 8%);
-
-    .style--light & {
-        color: fade(@contrast--light, 80%);
-    }
-
-    .style--accent & {
-        color: fade(@contrast--accent, 80%);
-    }
-
-    .style--dark & {
-        color: fade(@contrast--dark, 80%);
-    }
-}
-
-// Read more
-
-a.blogpostlist__read-more {
-    display: flex;
-    align-items: center;
-    float: left;
-    margin-top: 1em;
-}
-
-// Footer
-
-.blogpostlist__post-footer {
-	float: right;
-
-	.make-font-a-little-smaller(@font__p--font-size);
-	.make-font-smaller(@font__p--font-size);
-	.make-font-a-lot-smaller(@font__p--font-size);
-
-	.timestamp {
-		margin: 2em 0 0;
-		font-size: @font__p--font-size*0.8;
-
+    
+    // Post Excerpt
+    
+    &__post-excerpt p {
+        line-height: 1.5em;
+        color: lighten(@color__p--text, 8%);
+    
         .style--light & {
             color: fade(@contrast--light, 80%);
         }
-
+    
         .style--accent & {
             color: fade(@contrast--accent, 80%);
         }
-
+    
         .style--dark & {
             color: fade(@contrast--dark, 80%);
         }
-	}
+    }
+    
+    // Read more
+    
+    &__read-more {
+        display: flex;
+        align-items: center;
+        float: left;
+        margin-top: 1em;
+    }
+    
+    // Footer
+    
+    &__post-footer {
+        float: right;
+    
+        .make-font-a-little-smaller(@font__p--font-size);
+        .make-font-smaller(@font__p--font-size);
+        .make-font-a-lot-smaller(@font__p--font-size);
+    
+        .timestamp {
+            margin: 2em 0 0;
+            font-size: @font__p--font-size*0.8;
+    
+            .style--light & {
+                color: fade(@contrast--light, 80%);
+            }
+    
+            .style--accent & {
+                color: fade(@contrast--accent, 80%);
+            }
+    
+            .style--dark & {
+                color: fade(@contrast--dark, 80%);
+            }
+        }
+    }
 }
 
 // Paginatinon

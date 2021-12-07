@@ -355,44 +355,47 @@
 
 // Listing Order
 
-.ecomproductslist .listing-order {
-    display: none;
-    .clearfix();
-    color: fade(@color__p--text, 80%);
-    border-bottom: 1px solid fade(@color__p--text, 16%);
-	padding: 20px 70px;
+.ecomproductslist {
 	
-    @media @tablet-horizontal {
-        padding: 16px 40px;
-    }
-    @media @tablet {
-        padding: 12px 20px;
-    }
-	
-	.responsivecolumns & {
-        padding: 12px 20px;
+	.listing-order {
+		display: none;
+		.clearfix();
+		color: fade(@color__p--text, 80%);
+		border-bottom: 1px solid fade(@color__p--text, 16%);
+		padding: 20px 70px;
+		
+		@media @tablet-horizontal {
+			padding: 16px 40px;
+		}
+		@media @tablet {
+			padding: 12px 20px;
+		}
+		
+		.responsivecolumns & {
+			padding: 12px 20px;
+		}
+
+		.style--light & {
+			border-color: darken(@color--light, 10%);
+			color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 10%);
+			color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 10%);
+			color: fade(@contrast--dark, 80%);
+		}
 	}
 
-    .style--light & {
-        border-color: darken(@color--light, 10%);
-        color: fade(@contrast--light, 80%);
-    }
+	// Listing Body
 
-    .style--accent & {
-        border-color: darken(@color--accent, 10%);
-        color: fade(@contrast--accent, 80%);
-    }
-
-    .style--dark & {
-        border-color: darken(@color--dark, 10%);
-        color: fade(@contrast--dark, 80%);
-    }
-}
-
-// Listing Body
-
-.ecomproductslist .listing-body {
-    .clearfix();
+	.listing-body {
+		.clearfix();
+	}
 }
 
 // Product List
