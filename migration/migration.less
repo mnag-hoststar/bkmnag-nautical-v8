@@ -1,5 +1,8 @@
 //  Migration Styles
 
+//  These changes allow rows to work with
+//  existing templates in BK10
+
 // Template styling resets
 
 #migrated {
@@ -25,11 +28,9 @@
             margin-top: 12px;
         }
     }
-}
 
-// Re-add the reset styles
+    // Re-add the reset styles
 
-#migrated {
     // Applies the container value to widgets
     .empty-zone,
     #page-zones__main:empty,
@@ -37,24 +38,24 @@
     .row:not(.row--width-no-padding) .row__container,
     [data-widget-type="pagetitle"] {
         margin-left: auto;
-        margin-right: auto;         // Centers the contained widgets
+        margin-right: auto; // Centers the contained widgets
         max-width: 1140px;
-        width: 90%;                 // Container padding
+        width: 90%; // Container padding
     }
 
     // Replaces main padding by moving this to the first widget in the zone
     &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
     #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 4em!important;           // Main padding top
+        margin-top: 4em !important; // Main padding top
 
         @media @mobile {
-            margin-top: 2em!important;
+            margin-top: 2em !important;
         }
     }
 
     // Replaces main padding by moving this to the last widget in the zone
     #page-zones__main > .widget:not([data-name="row"]):last-child {
-        margin-bottom: 4em;        // Main padding bottom
+        margin-bottom: 4em; // Main padding bottom
 
         @media @mobile {
             margin-bottom: 2em;
@@ -63,7 +64,7 @@
 
     // Add spacing to the top of a widget when it follows a row
     #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]) {
-        margin-top: 20px;           // Widget margin bottom
+        margin-top: 20px; // Widget margin bottom
     }
 
     // Re-add widget spacing inside of rows
