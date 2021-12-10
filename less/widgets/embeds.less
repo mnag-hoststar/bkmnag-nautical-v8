@@ -30,14 +30,15 @@
     }
 }
 
-// Vimeo embed
+// Embed
+
+.embed-content iframe,
+iframe[src*="vimeo"] {
+	max-width: 100%;
+}
 
 iframe {
     border-radius: 5px;
-}
-
-iframe[src*="vimeo"] {
-	width: 100%;
 }
 
 div.embed-content p {
