@@ -21,15 +21,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-// Break long words.
-
 h1, h2, h3, h4, h5, h6, p {
 	word-break: break-word;
-}
-
-p, a {
-	padding: 0.5em 0;
-    hyphens: auto;
 }
 
 h1, .heading--1 {
@@ -111,6 +104,33 @@ h6, .heading--6 {
 	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
 }
 
+// Normal Text
+
+.widget {
+	p, span, small, pre, code,
+	table, th, td,
+	&.content {
+		color: @font-swatch5-color;
+	
+		.style--light & {
+			color: @contrast--light;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
+	}
+}
+
+p, a {
+	padding: 0.5em 0;
+    hyphens: auto;
+}
+
 p, .paragraph, ul, ol, li {
 	// This is already defined in the html tag.
 
@@ -172,28 +192,6 @@ span {
 
 // Link
 
-[data-name="content"] a {
-	display: inline;
-	color: @color-highlight;
-	line-height: 1.3em;
-	overflow: visible;
-	border-bottom: 1px solid @color-highlight--light;
-	background-color: transparent;
-	margin: 0 -2px;
-	padding: 0 2px;
-	height: auto;
-	.transition(all 0.15s ease-in-out);
-
-    &, &:hover {
-        text-decoration: none;
-    }
-	
-	&:hover {
-		color: darken(@color__p--text, 20%);
-		border-bottom: 1px solid darken(@color__p--text, 20%);
-	}
-}
-
 a {
 	text-decoration: none;
 	.transition();
@@ -201,41 +199,80 @@ a {
 	&, &:hover {
         text-decoration: none;
     }
-}
 
-a[class] {
-	margin: 0;
-	padding: 0;
-	
-    &, &:hover {
-		border-bottom: none;
+	[data-name="content"] & {
+		display: inline;
+		color: @color-highlight;
+		line-height: 1.3em;
+		overflow: visible;
+		border-bottom: 1px solid @color-highlight--light;
 		background-color: transparent;
-    }
+		margin: 0 -2px;
+		padding: 0 2px;
+		height: auto;
+		.transition(all 0.15s ease-in-out);
+	
+		&, &:hover {
+			text-decoration: none;
+		}
+		
+		&:hover {
+			color: darken(@color__p--text, 20%);
+			border-bottom: 1px solid darken(@color__p--text, 20%);
+		}
+	}
+
+	&[class] {
+		margin: 0;
+		padding: 0;
+		
+		&, &:hover {
+			border-bottom: none;
+			background-color: transparent;
+		}
+	}
 }
 
-// Small
-
-small {
-	color: @color__p--text;
-}
-
-// Preformatted Text and Code
+// Preformatted and Code Text
 
 pre, code {
 	display: block;
 	margin: 1em 0;
-	padding: 1em 1.5em;
+	padding: 0.5em 1em;
 	border: none;
 	.border-radius(0);
-	background-color: @color-text--lightest;
+	background-color: darken(@color-swatch1, 10%);
 	overflow: auto;
-	
 	.paragraph;
 	font-family: monospace;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@color--dark, 10%);
+	}
 }
 
 code {
-	border-left: 10px solid @color-highlight;
+	border-left: 1px solid @color-swatch5;
+
+	.style--light & {
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+	}
 }
 
 // Unordered and Ordered List
