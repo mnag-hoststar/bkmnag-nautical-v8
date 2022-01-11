@@ -360,7 +360,7 @@ input:focus {
 
 // Select
 
-.select {
+select {
     position: relative;
     display: block;
 	padding: 0 2.2em 0 1em;
@@ -443,6 +443,11 @@ input:focus {
 
 	&::-ms-expand {
 		display: none;
+	}
+	
+	option {
+		background-color: @color__container--background;
+		color: @color__p--text;
 	}
 }
 
