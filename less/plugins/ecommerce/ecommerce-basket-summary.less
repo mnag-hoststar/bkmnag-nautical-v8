@@ -100,7 +100,7 @@
     // Item Title
 
     .summary-item-title {
-		heading--4;
+		.heading--4;
     }
 
 	// Item Link
@@ -174,7 +174,8 @@
 
     // Cell Total, Cell Price
 
-	.cell--price, .cell--total {
+	.cell--price,
+    .cell--total {
         text-align: right;
 		@media @basketsummary-medium, @mobile {
             float: left;
@@ -186,10 +187,9 @@
 	
     .cell--total {
         text-align: right;
-
     }
+
     .cell--price {
-		
         @media @basketsummary-medium, @mobile {
             text-align: left;
             clear: left;
@@ -240,12 +240,22 @@
 	}
 }
 
-// Button
+// Buttons
 
 .summary-form {
     text-align: right;
 
     @media @basketsummary-medium, @mobile {
         text-align: center;
+    }
+}
+
+.ecombasketsummary {
+    &__continue-shopping,
+    &__button {
+        @media @mobile {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
