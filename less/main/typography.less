@@ -394,30 +394,31 @@ ul {
 	}
 }
 
-// Block Quote
+// Blockquote
 
 blockquote {
-	background: @color-highlight--lighter;
+	background-color: @color-highlight--lighter;
 	position: relative;
-	padding: 10px!important;
+	padding: 10px !important;
 	margin: 2em 0;
 	font-style: italic;
 	font-family: @font__p--font-family;
+	color: @font__p--font-size;
 	.border-radius(10px);
 	word-break: break-word;
 
 	.style--light & {
-		background-color: fade(@color--dark, 20%);
+		background-color: fade(@contrast--light, 20%);
 	    color: @contrast--light;
 	}
 
 	.style--accent & {
-		background-color: fade(@color--light, 20%);
+		background-color: fade(@contrast--accent, 20%);
 	    color: @contrast--accent;
 	}
 
 	.style--dark & {
-		background-color: fade(@color--light, 20%);
+		background-color: fade(@contrast--dark, 20%);
 	    color: @contrast--dark;
 	}
 	
