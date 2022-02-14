@@ -1,13 +1,13 @@
 {
 	"name":"Nautical 2.0",
     "widgetVersion": 2,
-	"thumbnail":"nautical.png",
-	"screenshot":"nautical-screenshot.jpg",
+	"thumbnail":"images/thumbnail.png",
+	"screenshot":"images/screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
     "versionTenCompatible": 1,
     "images":[
-        "images/feature-image.jpg",
+        "images/feature-bg.jpg",
         "images/gallery/1.jpg",
         "images/gallery/2.jpg",
         "images/gallery/3.jpg",
