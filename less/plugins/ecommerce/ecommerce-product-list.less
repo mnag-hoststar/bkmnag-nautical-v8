@@ -190,7 +190,7 @@
 				margin-top: -0.5em;
 
                 .style--light & {
-                    color: @contrast--accent;
+                    color: @color__button--text;
                 }
 
                 .style--accent & {
@@ -322,7 +322,7 @@
 			word-break: break-word;
 
             .style--light & {
-                color: @contrast--light;
+                color: lighten(@color__p--text, 30%);
             }
 
             .style--accent & {
@@ -361,8 +361,8 @@
 	.listing-order {
 		display: none;
 		.clearfix();
-		color: fade(@color__p--text, 80%);
 		border-bottom: 1px solid fade(@color__p--text, 16%);
+		color: fade(@color__p--text, 80%);
 		padding: 20px 70px;
 		
 		@media @tablet-horizontal {
@@ -377,8 +377,8 @@
 		}
 
 		.style--light & {
-			border-color: darken(@color--light, 10%);
-			color: fade(@contrast--light, 80%);
+			border-color: fade(@color__p--text, 16%);
+			color: fade(@color__p--text, 80%);
 		}
 
 		.style--accent & {
@@ -540,7 +540,7 @@
         color: @color__ecomproductslist-product-title--text;
 
         .style--light & {
-            color: @contrast--light;
+            color: @color__ecomproductslist-product-title--text;
         }
 
         .style--accent & {
@@ -574,7 +574,7 @@
     }
 
     .style--light & {
-        color: @contrast--light;
+        color: @color__h2--text;
     }
 
     .style--accent & {

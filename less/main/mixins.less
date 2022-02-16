@@ -324,8 +324,8 @@
 	.make-font-a-lot-smaller(@font__p--font-size);
 
 	.style--light & {
-		background-color: darken(@color--light, 10%);
-		color: @contrast--light;
+		background-color: @color-text--lightest;
+		color: @font__p--font-size;
 	}
 
 	.style--accent & {
@@ -344,7 +344,7 @@
 		background-color: @color-text--lighter;
 
 		.style--light & {
-			background-color: darken(@color--light, 20%);
+			background-color: @color-text--lighter;
 		}
 	
 		.style--accent & {

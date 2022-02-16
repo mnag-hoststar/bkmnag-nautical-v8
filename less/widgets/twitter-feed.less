@@ -47,7 +47,7 @@
 	background-color: @color__twitter--background;
 
 	.style--light & {
-        background-color: @color--light;
+        background-color: @color__twitter--background;
     }
 
     .style--accent & {
@@ -90,6 +90,18 @@
 	.item--margin-size--2to1-cols();
 	font-size: @font__p--font-size;
 	.clearfix();
+
+	.style--light & {
+        background-color: @color__twitter-item--background;
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+    }
 	
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
@@ -107,18 +119,6 @@
 		width: 100%;
 		margin: 0;
 	}
-
-	.style--light & {
-        background-color: @color--light;
-    }
-
-    .style--accent & {
-        background-color: @color--accent;
-    }
-
-    .style--dark & {
-        background-color: @color--dark;
-    }
 }
 
 // Avatar
@@ -145,17 +145,9 @@ a.twitter__account-link {
 	.heading--4;
 	font-size: @font__p--font-size;
 	.twitter__account-link--spacing();
-	
-	.make-font-a-little-smaller(@font__p--font-size);
-	.make-font-smaller(@font__p--font-size);
-	.make-font-a-lot-smaller(@font__p--font-size);
-	
-	.make-line-height-a-little-smaller(@font__h4--line-height);
-	.make-line-height-smaller(@font__h4--line-height);
-	.make-line-height-a-lot-smaller(@font__h4--line-height);
 
     .style--light & {
-        color: @contrast--light;
+        color: @color__h4--text;
     }
 
     .style--accent & {
@@ -165,6 +157,14 @@ a.twitter__account-link {
     .style--dark & {
         color: @contrast--dark;
     }
+	
+	.make-font-a-little-smaller(@font__p--font-size);
+	.make-font-smaller(@font__p--font-size);
+	.make-font-a-lot-smaller(@font__p--font-size);
+	
+	.make-line-height-a-little-smaller(@font__h4--line-height);
+	.make-line-height-smaller(@font__h4--line-height);
+	.make-line-height-a-lot-smaller(@font__h4--line-height);
 }
 
 // Content
@@ -175,6 +175,8 @@ a.twitter__account-link {
 	.tweet-content--spacing();
 
     a {
+		color: @color__p--text;
+
         .style--light & {
             color: @contrast--light;
         }
@@ -233,6 +235,7 @@ a.twitter__account-link {
 .tweet-metadata .via,
 .tweet-metadata a,
 .twitter__timestamp {
+	color: @color__p--text;
 
 	.style--light & {
         color: @contrast--light;

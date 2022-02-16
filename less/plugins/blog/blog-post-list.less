@@ -27,7 +27,7 @@
 	margin-bottom: 50px;
 
     .style--light & {
-        border-color: darken(@color--light, 10%);
+        border-color: @color__p--text;
     }
 
     .style--accent & {
@@ -87,6 +87,8 @@
     }
 
     &__title-link {
+        color: @color__p--text;
+
         .style--light & {
             color: @contrast--light;
         }
@@ -107,7 +109,7 @@
         color: lighten(@color__p--text, 8%);
     
         .style--light & {
-            color: fade(@contrast--light, 80%);
+            color: lighten(@color__p--text, 8%);
         }
     
         .style--accent & {
@@ -144,18 +146,6 @@
         .timestamp {
             margin: 2em 0 0;
             font-size: @font__p--font-size*0.8;
-    
-            .style--light & {
-                color: fade(@contrast--light, 80%);
-            }
-    
-            .style--accent & {
-                color: fade(@contrast--accent, 80%);
-            }
-    
-            .style--dark & {
-                color: fade(@contrast--dark, 80%);
-            }
         }
     }
 }
