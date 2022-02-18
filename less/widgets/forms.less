@@ -389,6 +389,10 @@ input:focus {
 
 // Select
 
+.advancedcontactform__select {
+	padding-left: 1em;
+}
+
 select {
     position: relative;
     display: block;
@@ -404,6 +408,7 @@ select {
     background-repeat: no-repeat;
     background-position: right 8px center;
     background-size: 1.2em;
+	text-overflow: ellipsis;
 
     .style--light & {
         background-color: @color__form--background;
@@ -685,6 +690,7 @@ select {
 		.button {
 			word-break: break-word;
 			width: 100%;
+			line-height: 1em;
 		}
 		
 		label {

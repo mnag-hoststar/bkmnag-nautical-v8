@@ -31,11 +31,17 @@
         margin: 0 1% 2%;
     }
 	
-   @media @mobile {
+   	@media @mobile {
         width: 100%;
         height: auto;
         margin: 0 0 2% 0;
     }
+	
+	.responsivecolumns & {
+        width: 100%;
+        height: auto;
+        margin: 0 0 2% 0;
+	}
 	
     // Link
 
@@ -47,19 +53,8 @@
     // Item Count
 
     .item-count {
-        float: right;
         opacity: 0.5;
     }
-	
-	.responsivecolumns & {
-		a {
-			display: inline-block;
-		}
-
-		.item-count {
-			float: none;
-		}
-	}
 
 	.columns-four-first &,
 	.columns-four-second &,

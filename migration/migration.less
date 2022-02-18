@@ -13,6 +13,7 @@
     .template__content .container {
         max-width: 100%;
         width: 100%;
+        padding: 0;
     }
 
     .page--default [data-widget-type="pagetitle"] {
@@ -29,6 +30,12 @@
         }
     }
 
+    // Links
+
+    [data-name="row"] [data-name^="content"] a:not(.contentgroup__link) {
+        text-decoration: none;
+    }
+
     // Re-add the reset styles
 
     // Applies the container value to widgets
@@ -41,6 +48,8 @@
         margin-right: auto; // Centers the contained widgets
         max-width: 1140px;
         width: 90%; // Container padding
+        padding: 5% 0;
+		background: transparent;
     }
 
     // Replaces main padding by moving this to the first widget in the zone

@@ -126,36 +126,34 @@ h6, .heading--6 {
 
 // Normal Text
 
-.widget.content,
-.widget.content.in-editing {
-	.wysihtml-editor-content,
-	.embed-content {
-		font-size: @font__p--font-size !important;
-		line-height: @font__p--line-height !important;
+.widget .content,
+.widget .content.in-editing,
+.widget .embed .embed-content {
+	font-size: @font__p--font-size !important;
+	line-height: @font__p--line-height !important;
+
+	.make-font-a-little-smaller(@font__p--font-size, ~"!important");
+	.make-font-smaller(@font__p--font-size, ~"!important");
+	.make-font-a-lot-smaller(@font__p--font-size, ~"!important");
 	
-		.make-font-a-little-smaller(@font__p--font-size, ~"!important");
-		.make-font-smaller(@font__p--font-size, ~"!important");
-		.make-font-a-lot-smaller(@font__p--font-size, ~"!important");
-		
-		.make-line-height-a-little-smaller(@font__p--line-height, ~"!important");
-		.make-line-height-smaller(@font__p--line-height, ~"!important");
-		.make-line-height-a-lot-smaller(@font__p--line-height, ~"!important");
+	.make-line-height-a-little-smaller(@font__p--line-height, ~"!important");
+	.make-line-height-smaller(@font__p--line-height, ~"!important");
+	.make-line-height-a-lot-smaller(@font__p--line-height, ~"!important");
+
+	&, p, span, small, pre, code,
+	table, th, td {
+		color: @color__p--text;
 	
-		&, p, span, small, pre, code,
-		table, th, td {
+		.style--light & {
 			color: @color__p--text;
-		
-			.style--light & {
-				color: @color__p--text;
-			}
-		
-			.style--accent & {
-				color: @contrast--accent;
-			}
-		
-			.style--dark & {
-				color: @contrast--dark;
-			}
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
 		}
 	}
 }
@@ -309,7 +307,7 @@ pre, code {
 	margin: 1em 0;
 	padding: 0.5em 1em;
 	border: none;
-	.border-radius(0);
+	.border-radius(10px);
 	background-color: @color-text--lightest;
 	overflow: auto;
 	font-family: monospace;
@@ -345,47 +343,53 @@ code {
 
 // Unordered and Ordered List
 
-ul {
-	margin: 1em 0 1em 1.2em;
-	padding: 0;
-
-	li {
-		padding: 0 0 0 0.5em;
-		margin: 0 0 .5em 0;
-
-		@media @tablet {
-			padding-left: 0;
+.widget .content,
+.blogpost__post-body,
+.ecomproduct__product-body {
+	ul {
+		margin: 0.5em 0 0.5em 2em;
+		padding-left: 0;
+		list-style: none;
+	
+		li {
+			position: relative;
+			padding: 0;
+			margin: 0 0 0.25em 0;
+	
+			&:before {
+				position: absolute;
+				content: "\2013";
+				left: -2em;
+			}
 		}
 	}
-}
-
-.bk-zone ol {
-	margin: 1em 0;
-	padding-left: 0;
-	counter-reset: ordered-counter;
-
-	li {
-		position: relative;
-		padding-left: 3.5em;
-		margin-bottom: .5em;
-		list-style-type: none;
-
-		// Custom Numbers
-
-		&:before {
-			min-width: 2em;
-			padding: 0 0.4em 0 0;
-			display: inline-block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			.box-sizing(border-box);
-			border-right: 1px solid @color-text--lighter;
-			font-family: @font__h1--font-family;
-			content: counter(ordered-counter);
-			counter-increment: ordered-counter;
-			text-align: left;
+	
+	ol {
+		margin: 0.5em 0;
+		padding-left: 0;
+		counter-reset: ordered-counter;
+	
+		li {
+			position: relative;
+			padding-left: 2em;
+			margin: 0 0 0.25em 0;
+			list-style-type: none;
+	
+			// Custom Numbers
+	
+			&:before {
+				min-width: 2em;
+				padding: 0 0.4em 0 0;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				.box-sizing(border-box);
+				content: counter(ordered-counter) ".";
+				counter-increment: ordered-counter;
+				text-align: left;
+			}
 		}
 	}
 }
@@ -431,59 +435,6 @@ blockquote {
 		
 		&:after {
 			display: none;
-		}
-	}
-}
-
-// Unordered and Ordered List
-
-.widget.content,
-.blog-post-content,
-.ecom-product-long-description {
-	ul {
-		margin: 0.5em 0 0.5em 2em;
-		padding-left: 0;
-		list-style: none;
-	
-		li {
-			position: relative;
-			padding: 0;
-			margin: 0 0 0.25em 0;
-	
-			&:before {
-				position: absolute;
-				content: "\2013";
-				left: -2em;
-			}
-		}
-	}
-	
-	ol {
-		margin: 0.5em 0;
-		padding-left: 0;
-		counter-reset: ordered-counter;
-	
-		li {
-			position: relative;
-			padding-left: 2em;
-			margin: 0 0 0.25em 0;
-			list-style-type: none;
-	
-			// Custom Numbers
-	
-			&:before {
-				min-width: 2em;
-				padding: 0 0.4em 0 0;
-				display: inline-block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				.box-sizing(border-box);
-				content: counter(ordered-counter) ".";
-				counter-increment: ordered-counter;
-				text-align: left;
-			}
 		}
 	}
 }
