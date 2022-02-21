@@ -78,16 +78,6 @@
 	.controls-font-size();
 }
 
-.responsiveslideshow__image-title,
-.responsiveslideshow__image-description {
-	margin: 0 auto;
-    width: @layout-width-desktop;
-
-	@media @tablet {
-		width: @layout-width-tablet;
-	}
-}
-
 .responsiveslideshow__image-title {
 	color: @color__slideshow-title--text;
 	font-size: @font__h4--font-size;
@@ -95,11 +85,23 @@
 	.make-font-a-little-smaller(@font__h4--font-size);
 	.make-font-smaller(@font__h4--font-size);
 	.make-font-a-lot-smaller(@font__h4--font-size);
+
+    .style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: @color__slideshow-title--text;
+    }
 }
 
 .responsiveslideshow__image-description {
 	color: @color__slideshow-description--text;
 	line-height: 1.3em;
+
+    .style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: @color__slideshow-description--text;
+    }
 }
 
 // Slide Navigation Buttons

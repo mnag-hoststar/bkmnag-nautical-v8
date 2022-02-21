@@ -171,48 +171,6 @@
         height: @font__button--line-height;
 		margin-bottom: 0.5em;
     }
-
-    .button--submit {
-        @media @tablet-horizontal {
-            display: block;
-            position: relative;
-			padding: 0 20px;
-
-            &:after {
-                content: '\f002';
-                font-family: 'FontAwesome', sans-serif;
-                position: absolute;
-                text-align: center;
-                color: @color__button--text;
-                font-size: 18px;
-                top: 50%;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                text-indent: 0;
-                margin-left: 0;
-				margin-top: -0.5em;
-
-                .style--light & {
-                    color: @color__button--text;
-                }
-
-                .style--accent & {
-                    color: @contrast--dark;
-                }
-
-                .style--dark & {
-                    color: @contrast--accent;
-                }
-            }
-        }
-	
-		.responsivecolumns & {
-            display: block;
-            position: relative;
-            padding: 0;
-		}
-    }
 }
 
 // Dropdowns

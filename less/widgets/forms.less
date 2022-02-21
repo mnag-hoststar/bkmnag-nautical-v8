@@ -95,20 +95,7 @@ textarea {
         color: @contrast--light;
     }
 	
-	&:hover {
-		background-color: fade(@color__form--background, 75%);
-    	border: 1px solid transparent;
-
-        .style--light & {
-            background-color: fade(@color__form--background, 75%);
-        }
-
-        .style--accent &,
-        .style--dark {
-            background-color: @color--light;
-        }
-	}
-	
+	&:hover,
 	&:focus {
     	border: 1px solid @color-highlight--light;
 		.box-shadow(none);
@@ -229,13 +216,14 @@ input:focus {
 			margin-left: 40px;
 			.transform-scale(1);
 			word-break: break-word;
+			line-height: 1.5em;
 
 			&:before {
 				content: " ";
 				position: absolute;
 				left: -40px;
-				width: 22px;
-				height: 22px;
+				width: 1.5em;
+				height: 1.5em;
 				background-color: @color__form--background;
 				border: 1px solid transparent;
 
@@ -328,10 +316,10 @@ input:focus {
 				content: " ";
 				.border-radius(1em);
 				background-color: @color__button--background;
-				top: 1px;
-				left: -39px;
-				width: 20px;
-				height: 20px;
+				top: 0;
+				left: -40px;
+				width: 1.5em;
+				height: 1.5em;
 				.transform-scale(0.5);
 
                 .style--light & {
@@ -353,7 +341,8 @@ input:focus {
 				font-family: 'FontAwesome', sans-serif;
 				color: @color__button--background;
 				left: -36px;
-				top: 1px;
+				top: 0;
+				font-size: 1em;
 
                 .style--light & {
 					color: @color__button--background;
@@ -425,40 +414,10 @@ select {
 		padding: 0 2.7em 0 1em;
     }
 
-    &:hover {
-		border: 1px solid transparent;
-		background-color: fade(@color__form--background, 75%);
-
-        .style--light & {
-            background-color: fade(@color__form--background, 75%);
-        }
-
-        .style--accent &,
-        .style--dark {
-            background-color: @color--light;
-        }
-    }
-
-    &:focus {
-		border: 1px solid @color-highlight--light;
-		background-color: transparent;
-
-        .style--light & {
-            border-color: @color-highlight--light;
-        }
-
-        .style--accent & {
-            border-color: @contrast-accent;
-        }
-
-        .style--dark & {
-            border-color: @color--accent;
-        }
-	}
-	
+    &:hover,
+	&:focus,
 	&:hover:focus {
 		border: 1px solid @color-highlight;
-		background-color: transparent;
 
         .style--light & {
             border-color: @color-highlight;
