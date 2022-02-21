@@ -127,9 +127,7 @@
 		max-width: 100%;
 		padding: 0 @language-padding/2;
 		.transition(all 0.2s ease-in-out);
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        border-radius: 20px;
+		.border-radius(20px);
 	}
 	
 	.language-selector.language-selector--horizontal & {
@@ -161,14 +159,10 @@
 	}
 	
 	.language-selector.language-selector--dropdown & {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
+		.border-radius(0);
         
 	    &--current {
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
+			.border-radius(20px);
             margin-bottom: @language-padding;
 	    }
 	}
