@@ -311,6 +311,8 @@ pre, code {
 	background-color: @color-text--lightest;
 	overflow: auto;
 	font-family: monospace;
+	line-height: 1.8em;
+	font-size: @font__p--font-size;
 
 	.style--light & {
 		background-color: @color-text--lightest;
@@ -420,6 +422,14 @@ blockquote {
 	.style--dark & {
 		background-color: fade(@contrast--dark, 20%);
 	    color: @contrast--dark;
+	}
+
+	&:before {
+		content: open-quote;
+		font-family: Georgia, sans-serif;
+		color: @font__p--font-size;
+		position: static;
+		font-size: 2em;
 	}
 	
 	.responsivecolumns & {

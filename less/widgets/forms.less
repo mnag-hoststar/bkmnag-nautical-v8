@@ -307,47 +307,48 @@ input:focus {
 		}
 	}
 
-	.option-item--radio {
-		label {
-			&:after {
-				content: " ";
-				background-color: @color__button--background;
-				top: 0;
-				left: -40px;
-				width: 1.5em;
-				height: 1.5em;
-				.transform-scale(0.5);
+	.option-item--checkbox {
+		label:after {
+			content: "\f00c";
+			font-family: 'FontAwesome', sans-serif;
+			color: @color__button--background;
+			left: -36px;
+			top: 0;
+			font-size: 1em;
 
-                .style--light & {
-					background-color: @color__button--background;
-                }
+			.style--light & {
+				color: @color__button--background;
+			}
 
-                .style--accent &,
-                .style--dark & {
-                    background-color: @color--accent;
-                }
+			.style--accent &,
+			.style--dark & {
+				color: @color--accent;
 			}
 		}
 	}
 
-	.option-item--checkbox {
-		label {
-			&:after {
-				content: "\f00c";
-				font-family: 'FontAwesome', sans-serif;
-				color: @color__button--background;
-				left: -36px;
-				top: 0;
-				font-size: 1em;
+	.option-item--radio {
+		label:before {
+			border-radius: 50%;
+		}
 
-                .style--light & {
-					color: @color__button--background;
-                }
+		label:after {
+			content: " ";
+			background-color: @color__button--background;
+			top: 0;
+			left: -40px;
+			width: 1.5em;
+			height: 1.5em;
+			.transform-scale(0.5);
+			border-radius: 50%;
 
-                .style--accent &,
-                .style--dark & {
-                    color: @color--accent;
-                }
+			.style--light & {
+				background-color: @color__button--background;
+			}
+
+			.style--accent &,
+			.style--dark & {
+				background-color: @color--accent;
 			}
 		}
 	}
