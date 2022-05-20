@@ -63,7 +63,6 @@ input[type="password"],
 .input--search,
 textarea,
 select {
-	height: @font__button--line-height;
 	font-size: @font__p--font-size * 0.9;
 }
 
@@ -80,6 +79,7 @@ textarea {
     background-color: @color__form--background;
     border: 1px solid transparent;
     color: @color__p--text;
+	height: auto !important;
 	.transition(all 0.15s ease-in-out);
     .border-radius(20px);
     .appearance(none);
@@ -118,6 +118,7 @@ textarea {
 
 textarea {
     display: block;
+	min-height: 100px;
 }
 
 // Placeholders
