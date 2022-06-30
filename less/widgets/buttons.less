@@ -8,12 +8,13 @@ a.button,
 a.ecomproduct__button,
 a.blogpostlist__read-more,
 a.contentgroup__link,
-.userregistration fieldset .userregistrationbtn {
+.userregistration fieldset .userregistrationbtn,
+.ecomproductslist__button--clear {
     cursor: pointer;
     position: relative;
     display: inline-block;
-    padding: 0.9em 20px;
-	min-height: 36px;
+    padding: 0.7em 20px;
+	min-height: 32px;
     height: auto;
     text-transform: uppercase;
     .appearance(none);
@@ -27,6 +28,7 @@ a.contentgroup__link,
 	line-height: 1em;
     color: @color__button--text;
     -webkit-font-smoothing: antialiased;
+    word-break: break-word;
 
     .style--light & {
         background-color: @color__button--background;

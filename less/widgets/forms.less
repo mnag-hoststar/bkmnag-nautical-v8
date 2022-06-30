@@ -75,14 +75,21 @@ input[type="password"],
 .input--single-line,
 .input--search,
 textarea {
-    padding: 0.6em 1em;
+    padding: 0.7em 1em;
     background-color: @color__form--background;
     border: 1px solid transparent;
+	font-size: @font__button--font-size;
+	line-height: 1em;
     color: @color__p--text;
+	min-height: 32px;
 	height: auto !important;
 	.transition(all 0.15s ease-in-out);
     .border-radius(20px);
     .appearance(none);
+
+	.make-font-a-little-smaller(@font__button--font-size);
+	.make-font-smaller(@font__button--font-size);
+	.make-font-a-lot-smaller(@font__button--font-size);
 
     .style--light & {
         background-color: @color__form--background;
