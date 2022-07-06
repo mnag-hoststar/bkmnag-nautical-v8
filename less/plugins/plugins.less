@@ -22,8 +22,9 @@
 a.category-link,
 a.tag-link {
 	display: inline-block;
+	line-height: 1.4em;
 	background: @color__button--background;
-	margin: 0;
+	margin: 0.25em;
 	padding: 0.5em 10px;
 	line-height: 1.25em;
 	font-size: @font__p--font-size;
@@ -50,11 +51,6 @@ a.tag-link {
 	    background-color: @color--accent;
 	    color: @contrast--accent;
 	}
-}
-
-a.category-link,
-a.tag-link {
-	cursor: pointer;
 
 	&:hover {
 		background: @color__button--background--hover;
@@ -84,6 +80,8 @@ a.tag-link {
 	.pagination-list {
 		.display-flex(flex);
 		margin: 2em auto;
+		gap: 0.5em;
+		justify-content: center;
 	}
 
 	.pagination-item {
@@ -93,14 +91,6 @@ a.tag-link {
 
 	a.button--pagination {
 		.link-button;
-		
-		&:before {
-			margin-left: -0.3em;
-		}
-		
-		&:after {
-			margin-right: -0.3em;
-		}
 	}
 }
 
